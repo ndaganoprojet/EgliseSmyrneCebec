@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protection des femmes – CMPS Smyrne</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        *, *::before, *::after { box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            margin: 0;
+            font-family: 'Poppins', system-ui, sans-serif;
+            background: #faf8f3;
+            color: #1a1a2e;
+            overflow-x: hidden;
+        }
+        .serif { font-family: 'Playfair Display', Georgia, serif; letter-spacing: .025em; }
+        .smyrne-header.scrolled{
+            background:rgba(10,15,30,.95);
+            backdrop-filter: blur(18px);
+            box-shadow: 0 8px 30px rgba(0,0,0,.18);
+        }
+        .nav-link::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 2px;
+            background: #8b8c8d;
+            transition: width 0.3s;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        .sidebar {
+            transition: transform 0.3s ease-in-out;
+            transform: translateX(100%);
+        }
+        .sidebar.open {
+            transform: translateX(0);
+        }
+        .logo-hover {
+            transition: transform 0.3s ease-in-out;
+        }
+        .logo-hover:hover {
+            transform: scale(1.1);
+        }
+        @media (max-width: 1100px) {
+            .hideOnMobile { display: none; }
+            #menu-btn { display: block; }
+        }
+        @media (min-width: 1100px) {
+            #menu-btn { display: none; }
+            .hideOnMobile { display: block; }
+        }
+        .donation-button {
+            font-size: 17px;
+            font-weight: bold;
+            text-align: center;
+            background-color: transparent;
+            color: #d1d5db;
+            border: 2px solid #d1d5db;
+            border-radius: 26px;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            transition: border-color 0.3s ease, color 0.3s ease;
+            z-index: 1;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            padding: 5px 15px;
+            height: fit-content;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            white-space: nowrap;
+        }
+        .donation-button::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 0;
+            background-color: white;
+            transition: height 0.3s ease;
+            z-index: -1;
+            border-radius: 24px;
+        }
+        .donation-button:hover {
+            border-color: white;
+            color: #000;
+        }
+        .donation-button:hover::before {
+            height: 100%;
+        }
+        .donation-button #span {
+            position: relative;
+            z-index: 1;
+        }
+        .fere {
+            display: none;
+        }
+        footer {
+            background-color: #1a202c;
+            color: #d1d5db;
+            padding: 48px 24px;
+            font-family: 'Poppins', sans-serif;
+        }
+    .nav-cebec{display:none;color:#fcfbf9d0;font-size:11px;font-weight:700;letter-spacing:.14em;border-left:1px solid rgba(255,255,255,.35);padding-left:.75rem;margin-left:.25rem}
+    @media (min-width:768px){.nav-cebec{display:inline-block}}
+        .ref{font-size:12px;letter-spacing:.04em;color:#94a3b8;font-style:italic}
+    </style>
+</head>
+<body class="font-body text-gray-900 bg-white">
+    <header class=" smyrne-header fixed w-full z-50">
+        <nav >
+            <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+                <a href="index.html" class="flex items-center">
+                    <img src="bonj.png" alt="Logo" class="h-16 rounded-full logo-hover">
+                
+<div class="flex items-center md:ml-3 ml-2 md:space-x-3 space-x-2">
+    <span class="text-gray-100 text-sm tracking-wider">Église</span>
+    
+    <!-- Cross Container -->
+    <div class="relative w-4 h-5 flex items-center justify-center">
+        <!-- Vertical Bar -->
+        <div class="absolute h-4 w-0.5 bg-gradient-to-b from-gray-500 via-gray-200 to-gray-300 rounded-full"></div>
+        <!-- Horizontal Bar -->
+        <div class="absolute w-3 h-0.5 bg-gradient-to-r from-gray-500 via-gray-200 to-gray-300 rounded-full"></div>
+    </div>
+    
+    <span class="text-white text-xl font-subtitle tracking-wider font-semibold" data-i18n="churchName" style="font-family:'Plus Jakarta Sans', sans-serif;">SMYRNE</span>
+    <span class="nav-cebec">CEBEC · CMPS</span>
+</div>
+               
+                </a>
+                <ul class="flex items-center md:space-x-4 lg:space-x-8">
+                    <li class="hideOnMobile"><a href="index.html" class="nav-link text-white/85 text-sm  hover:text-white transition-colors" data-i18n="accueil">Accueil</a></li>
+   
+                    <li class="hideOnMobile group">
+                        <a href="departement.html" class="nav-link text-white/85 text-sm hover:text-white transition-colors">
+                            <span data-i18n="departements">Nos départements</span>
+                            <i class="fa-solid fa-chevron-down text-[10px] ml-1 transition-transform duration-500 group-hover:rotate-180 group-focus-within:rotate-180"></i>
+                        </a>
+                        <div class="absolute left-0 right-0 top-full -mt-10 pt-10 px-6 opacity-0 invisible translate-y-3 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 group-focus-within:opacity-100 group-focus-within:visible group-focus-within:translate-y-0 transition-all duration-500 ease-out">
+                            <div class="max-w-6xl mx-auto rounded-2xl bg-white shadow-2xl p-3 flex gap-1">
+                                <a href="evangelisation.html" class="group/item flex-1 flex flex-col items-center text-center gap-3 px-2 py-4 rounded-xl hover:bg-slate-100 transition-colors duration-200">
+                                    <span class="w-20 h-20 rounded-full bg-slate-100 text-slate-800 flex items-center justify-center group-hover/item:bg-slate-900 group-hover/item:text-white transition-colors duration-300"><i class="fa-solid fa-bullhorn text-lg"></i></span>
+                                    <span class="text-xs leading-snug text-slate-800" data-i18n="titre1">L’Evangélisation et vie des Missions</span>
+                                </a>
+                                <a href="protection-femme.html" class="group/item flex-1 flex flex-col items-center text-center gap-3 px-2 py-4 rounded-xl hover:bg-slate-100 transition-colors duration-200">
+                                    <span class="w-20 h-20 rounded-full bg-slate-100 text-slate-800 flex items-center justify-center group-hover/item:bg-slate-900 group-hover/item:text-white transition-colors duration-300"><i class="fa-solid fa-person-dress text-lg"></i></span>
+                                    <span class="text-xs leading-snug text-slate-800" data-i18n="titre2">La protection de la femme</span>
+                                </a>
+                                <a href="protection-enfant.html" class="group/item flex-1 flex flex-col items-center text-center gap-3 px-2 py-4 rounded-xl hover:bg-slate-100 transition-colors duration-200">
+                                    <span class="w-20 h-20 rounded-full bg-slate-100 text-slate-800 flex items-center justify-center group-hover/item:bg-slate-900 group-hover/item:text-white transition-colors duration-300"><i class="fa-solid fa-child text-lg"></i></span>
+                                    <span class="text-xs leading-snug text-slate-800" data-i18n="titre3">La protection de l’enfant</span>
+                                </a>
+                                <a href="securite-alimentaire.html" class="group/item flex-1 flex flex-col items-center text-center gap-3 px-2 py-4 rounded-xl hover:bg-slate-100 transition-colors duration-200">
+                                    <span class="w-20 h-20 rounded-full bg-slate-100 text-slate-800 flex items-center justify-center group-hover/item:bg-slate-900 group-hover/item:text-white transition-colors duration-300"><i class="fa-solid fa-wheat-awn text-lg"></i></span>
+                                    <span class="text-xs leading-snug text-slate-800" data-i18n="titre4">La sécurité alimentaire</span>
+                                </a>
+                                <a href="eau-hygiene-assainissement.html" class="group/item flex-1 flex flex-col items-center text-center gap-3 px-2 py-4 rounded-xl hover:bg-slate-100 transition-colors duration-200">
+                                    <span class="w-20 h-20 rounded-full bg-slate-100 text-slate-800 flex items-center justify-center group-hover/item:bg-slate-900 group-hover/item:text-white transition-colors duration-300"><i class="fa-solid fa-droplet text-lg"></i></span>
+                                    <span class="text-xs leading-snug text-slate-800" data-i18n="titre5">L’eau, hygiène et assainissement</span>
+                                </a>
+                                <a href="cohabitation-pacifique.html" class="group/item flex-1 flex flex-col items-center text-center gap-3 px-2 py-4 rounded-xl hover:bg-slate-100 transition-colors duration-200">
+                                    <span class="w-20 h-20 rounded-full bg-slate-100 text-slate-800 flex items-center justify-center group-hover/item:bg-slate-900 group-hover/item:text-white transition-colors duration-300"><i class="fa-solid fa-dove text-lg"></i></span>
+                                    <span class="text-xs leading-snug text-slate-800" data-i18n="titre6">La cohabitation pacifique</span>
+                                </a>
+                                <a href="protection-environnement.html" class="group/item flex-1 flex flex-col items-center text-center gap-3 px-2 py-4 rounded-xl hover:bg-slate-100 transition-colors duration-200">
+                                    <span class="w-20 h-20 rounded-full bg-slate-100 text-slate-800 flex items-center justify-center group-hover/item:bg-slate-900 group-hover/item:text-white transition-colors duration-300"><i class="fa-solid fa-tree text-lg"></i></span>
+                                    <span class="text-xs leading-snug text-slate-800" data-i18n="titre7">La protection de l’environnement</span>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="hideOnMobile"><a href="actualite.html" class="nav-link text-white/85 text-sm  hover:text-white transition-colors" data-i18n="actualites">Actualités</a></li>
+                    <li class="hideOnMobile"><a href="contact.html" class="nav-link text-white/85 text-sm  hover:text-white transition-colors" data-i18n="contacts">Contactes</a></li>
+                    <li class="hideOnMobile">
+                        <a href="donner.html" class="donation-button text-sm" data-i18n="faireDon">
+                            <span id="span">Faire un don</span>
+                        </a>
+                    </li>
+                    <div class="relative group hideOnMobile">
+                        <button id="language-dropdown-button" class="flex items-center text-white/85 text-sm font-medium focus:outline-none">
+                             <i class="fa-solid fa-globe mr-2"></i>
+                        <span data-i18n="language">Langue</span>
+                        <i class="fa-solid fa-chevron-down ml-[5px] transition-transform duration-500 group-hover:rotate-180 group-has-[:focus-visible]:rotate-180"></i>
+                            </svg>
+                        </button>
+                        <div id="language-dropdown-menu" class="absolute right-0 top-full pt-3 w-48 opacity-0 invisible translate-y-3 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 group-has-[:focus-visible]:opacity-100 group-has-[:focus-visible]:visible group-has-[:focus-visible]:translate-y-0 transition-all duration-500 ease-out">
+                        <div class="rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 overflow-hidden">
+                            <a href="#" class="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" data-lang="fr">
+                                <img src="https://flagicons.lipis.dev/flags/4x3/fr.svg" alt="French Flag" class="h-4 w-6 mr-2"> Français
+                            </a>
+                            <a href="#" class="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" data-lang="en">
+                                <img src="https://flagicons.lipis.dev/flags/4x3/gb.svg" alt="English Flag" class="h-4 w-6 mr-2"> English
+                            </a>
+                            <a href="#" class="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" data-lang="es">
+                                <img src="https://flagicons.lipis.dev/flags/4x3/es.svg" alt="Spanish Flag" class="h-4 w-6 mr-2"> Español
+                            </a>
+                            <a href="#" class="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" data-lang="sw">
+                                <img src="https://flagicons.lipis.dev/flags/4x3/tz.svg" alt="Swahili Flag" class="h-4 w-6 mr-2"> Swahili
+                            </a>
+                        </div>
+                        </div>
+                    </div>
+                    <button id="menu-btn" class="text-white focus:outline-none">
+                        <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                        </svg>
+                    </button>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="fere stick">
+        <a href="donner.html" class="donation-button text-sm" data-i18n="faireDon">
+            <span id="span">Faire un don</span>
+        </a>
+    </div>
+    <div id="sidebar" class="sidebar fixed top-0 right-0 w-3/4 max-w-sm h-full bg-gray-900 bg-opacity-95 backdrop-blur-md text-white shadow-xl z-50">
+        <div class="p-6 flex justify-end">
+            <button id="close-btn" class="focus:outline-none">
+                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+        </div>
+        <ul class="flex flex-col space-y-4 text-center text-lg font-medium">
+            <li><a href="index.html" class="block py-2 hover:bg-gray-800 transition-colors" data-i18n="accueil">Accueil</a></li>
+
+            <li>
+                <button id="sidebar-dept-button" class="flex items-center justify-center w-full py-2 hover:bg-gray-800 focus:outline-none">
+                    <span data-i18n="departements">Nos départements</span>
+                    <i class="fa-solid fa-chevron-down ml-2"></i>
+                </button>
+                <div id="sidebar-dept-menu" class="hidden text-left bg-gray-800 mx-4 rounded-md">
+                    <a href="evangelisation.html" class="flex items-center gap-3 px-4 py-2 text-sm text-gray-300 hover:bg-gray-700">
+                     
+                        <span data-i18n="titre1">L’Evangélisation et vie des Missions</span>
+                    </a>
+                    <a href="protection-femme.html" class="flex items-center gap-3 px-4 py-2 text-sm text-gray-300 hover:bg-gray-700">
+                 
+                        <span data-i18n="titre2">La protection de la femme</span>
+                    </a>
+                    <a href="protection-enfant.html" class="flex items-center gap-3 px-4 py-2 text-sm text-gray-300 hover:bg-gray-700">
+                        
+                        <span data-i18n="titre3">La protection de l’enfant</span>
+                    </a>
+                    <a href="securite-alimentaire.html" class="flex items-center gap-3 px-4 py-2 text-sm text-gray-300 hover:bg-gray-700">
+                        
+                        <span data-i18n="titre4">La sécurité alimentaire</span>
+                    </a>
+                    <a href="eau-hygiene-assainissement.html" class="flex items-center gap-3 px-4 py-2 text-sm text-gray-300 hover:bg-gray-700">
+                        
+                        <span data-i18n="titre5">L’eau, hygiène et assainissement</span>
+                    </a>
+                    <a href="cohabitation-pacifique.html" class="flex items-center gap-3 px-4 py-2 text-sm text-gray-300 hover:bg-gray-700">
+                        
+                        <span data-i18n="titre6">La cohabitation pacifique</span>
+                    </a>
+                    <a href="protection-environnement.html" class="flex items-center gap-3 px-4 py-2 text-sm text-gray-300 hover:bg-gray-700">
+                        
+                        <span data-i18n="titre7">La protection de l’environnement</span>
+                    </a>
+                </div>
+            </li>
+            <li><a href="actualite.html" class="block py-2 hover:bg-gray-800 transition-colors" data-i18n="actualites">Actualités</a></li>
+            <li><a href="contact.html" class="block py-2 hover:bg-gray-800 transition-colors" data-i18n="contacts">Contactes</a></li>
+            <li class="relative group">
+                <button id="sidebar-language-button" class="flex items-center justify-center w-full py-2 hover:bg-gray-800 focus:outline-none">
+                 <i class="fa-solid fa-globe mr-[5px]"></i>
+                        <span data-i18n="language">Langue</span>
+                        <i class="fa-solid fa-chevron-down ml-2"></i>
+                </button>
+                <div id="sidebar-language-menu" class="hidden text-left bg-gray-800 mx-4 rounded-md">
+                    <a href="#" class="flex items-center px-4 py-2 text-sm text-gray-300 hover:bg-gray-700" data-lang="fr">
+                        <img src="https://flagicons.lipis.dev/flags/4x3/fr.svg" alt="French Flag" class="h-4 w-6 mr-2"> Français
+                    </a>
+                    <a href="#" class="flex items-center px-4 py-2 text-sm text-gray-300 hover:bg-gray-700" data-lang="en">
+                        <img src="https://flagicons.lipis.dev/flags/4x3/gb.svg" alt="English Flag" class="h-4 w-6 mr-2"> English
+                    </a>
+                    <a href="#" class="flex items-center px-4 py-2 text-sm text-gray-300 hover:bg-gray-700" data-lang="es">
+                        <img src="https://flagicons.lipis.dev/flags/4x3/es.svg" alt="Spanish Flag" class="h-4 w-6 mr-2"> Español
+                    </a>
+                    <a href="#" class="flex items-center px-4 py-2 text-sm text-gray-300 hover:bg-gray-700" data-lang="sw">
+                        <img src="https://flagicons.lipis.dev/flags/4x3/tz.svg" alt="Swahili Flag" class="h-4 w-6 mr-2"> Swahili
+                    </a>
+                </div>
+            </li>
+            <li><a href="donner.html" class="block mt-4 mx-6 px-6 py-2 bg-white text-black font-bold rounded-full hover:bg-gray-200 transition-colors" data-i18n="faireDon">Faire un don</a></li>
+        </ul>
+    </div>
+
+    <section class="relative text-white pt-40 pb-20 px-6 bg-slate-950 bg-cover bg-center" style="background-image:url('cover.jpg')">
+        <div class="absolute inset-0 bg-slate-950/85"></div>
+        <div class="relative container mx-auto max-w-6xl">
+            <p class="text-sm text-white/60 mb-8"><a href="departement.html" class="hover:text-white">Départements</a><span class="mx-2">/</span>Protection des femmes</p>
+            <div class="flex items-start gap-6">
+                <span class="hidden md:flex w-20 h-20 shrink-0 rounded-full bg-white text-slate-900 items-center justify-center text-3xl"><i class="fa-solid fa-person-dress"></i></span>
+                <div>
+                    <h1 class="serif text-4xl md:text-6xl font-black mb-6">Protection des femmes</h1>
+                    <p class="text-lg md:text-xl text-slate-100 leading-relaxed max-w-3xl">Appuyer les femmes vulnérables à l’autonomisation, planification de naissances, lutter contre la pauvreté et à l’égalité entre Homme et Femme.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 px-6 bg-white">
+        <div class="container mx-auto max-w-6xl grid md:grid-cols-12 gap-12 md:gap-16">
+            <div class="md:col-span-8">
+                <h2 class="serif text-4xl md:text-5xl font-black mb-8">Ce que nous faisons</h2>
+                <ul>
+                    <li class="flex gap-6 py-5 border-b border-slate-200 last:border-b-0">
+                        <span class="serif text-3xl text-slate-300 w-10 shrink-0 leading-none pt-1">01</span>
+                        <p class="text-base leading-relaxed">Appui économique aux femmes vulnérables</p>
+                    </li>
+                    <li class="flex gap-6 py-5 border-b border-slate-200 last:border-b-0">
+                        <span class="serif text-3xl text-slate-300 w-10 shrink-0 leading-none pt-1">02</span>
+                        <p class="text-base leading-relaxed">Autonomisation des femmes</p>
+                    </li>
+                    <li class="flex gap-6 py-5 border-b border-slate-200 last:border-b-0">
+                        <span class="serif text-3xl text-slate-300 w-10 shrink-0 leading-none pt-1">03</span>
+                        <p class="text-base leading-relaxed">Formation des femmes aux métiers</p>
+                    </li>
+                    <li class="flex gap-6 py-5 border-b border-slate-200 last:border-b-0">
+                        <span class="serif text-3xl text-slate-300 w-10 shrink-0 leading-none pt-1">04</span>
+                        <p class="text-base leading-relaxed">Gender et alphabétisation</p>
+                    </li>
+                    <li class="flex gap-6 py-5 border-b border-slate-200 last:border-b-0">
+                        <span class="serif text-3xl text-slate-300 w-10 shrink-0 leading-none pt-1">05</span>
+                        <p class="text-base leading-relaxed">Planning familial</p>
+                    </li>
+                </ul>
+                <h2 class="serif text-4xl md:text-5xl font-black mt-16 mb-8">Qui nous aidons</h2>
+                <ul class="grid sm:grid-cols-2 gap-x-8 gap-y-3">
+                    <li class="flex items-start gap-3"><i class="fa-solid fa-check text-slate-400 mt-1.5"></i><span class="text-base leading-relaxed">Femmes vulnérables</span></li>
+                    <li class="flex items-start gap-3"><i class="fa-solid fa-check text-slate-400 mt-1.5"></i><span class="text-base leading-relaxed">Femmes à faibles revenus</span></li>
+                    <li class="flex items-start gap-3"><i class="fa-solid fa-check text-slate-400 mt-1.5"></i><span class="text-base leading-relaxed">PVV</span></li>
+                    <li class="flex items-start gap-3"><i class="fa-solid fa-check text-slate-400 mt-1.5"></i><span class="text-base leading-relaxed">Survivantes de VVS</span></li>
+                    <li class="flex items-start gap-3"><i class="fa-solid fa-check text-slate-400 mt-1.5"></i><span class="text-base leading-relaxed">Veuves</span></li>
+                </ul>
+            </div>
+            <aside class="md:col-span-4">
+                <div class="md:sticky md:top-28 space-y-6">
+                    <div class="rounded-2xl bg-slate-100 p-6">
+                        <h3 class="text-lg font-bold mb-3">Bureau de développement</h3>
+                        <a href="mailto:bdd@cmpsmyrne.org" class="block text-blue-700 hover:underline break-all">bdd@cmpsmyrne.org</a><a href="mailto:bddcmps@gmail.org" class="block text-blue-700 hover:underline break-all">bddcmps@gmail.org</a>
+                        <p class="mt-2 text-slate-700"><i class="fa-solid fa-phone mr-2 text-slate-500"></i>+243 818766836, +243 975407226</p>
+                    </div>
+                    <a href="donner.html" class="block text-center rounded-full bg-slate-950 text-white font-bold py-3 hover:opacity-90 transition-opacity">Soutenir ce département</a>
+                </div>
+            </aside>
+        </div>
+    </section>
+
+    <section class="py-20 px-6 bg-slate-100">
+        <div class="container mx-auto max-w-4xl">
+            <h2 class="serif text-4xl md:text-5xl font-black mb-8">Notre approche</h2>
+            <p class="text-base leading-relaxed mb-6">Ces programmes du Bureau de Développement seront mis sur pied progressivement et selon besoins et les moyens disponibles de la communauté et/ou de ses partenaires internes ou externes. Ces programmes sont conçus de manière à appuyer les catégories les plus vulnérables de nos sociétés modernes à savoir : les femmes et les enfants mais aussi les déplacés de guerres.</p>
+            <p class="text-base leading-relaxed">L’Eglise moderne d’aujourd’hui ne prêche plus uniquement par les Saintes écritures mais aussi à travers des actions caritatives en faveur des communautés en difficulté. Nul n’ignore combien ces domaines d’intervention ci haut choisi constituent de nos jours les grandes problématiques des actions humanitaires en Afrique en général et en RD Congo en particulier. Votre soutien sauvera des vies humaines. De la protection des femmes et enfants à la sécurité alimentaire en passant par l’eau, hygiène, assainissement et la consolidation de la paix (ces thématiques) constituent les grandes questions humanitaires à l’Est de la RD Congo.</p>
+        </div>
+    </section>
+
+    <section class="py-16 px-6 bg-white border-t border-slate-200">
+        <div class="container mx-auto max-w-6xl">
+            <h2 class="serif text-3xl md:text-4xl font-black mb-6">Autres départements</h2>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-10">
+                <a href="evangelisation.html" class="flex items-center gap-3 py-3 border-b border-slate-300 hover:text-slate-950 text-slate-700 transition-colors"><i class="fa-solid fa-bullhorn w-5 text-center text-slate-500"></i><span class="font-medium">Évangélisation et vie des Missions</span></a>
+                <a href="protection-enfant.html" class="flex items-center gap-3 py-3 border-b border-slate-300 hover:text-slate-950 text-slate-700 transition-colors"><i class="fa-solid fa-child w-5 text-center text-slate-500"></i><span class="font-medium">Protection de l’enfance</span></a>
+                <a href="securite-alimentaire.html" class="flex items-center gap-3 py-3 border-b border-slate-300 hover:text-slate-950 text-slate-700 transition-colors"><i class="fa-solid fa-wheat-awn w-5 text-center text-slate-500"></i><span class="font-medium">Sécurité alimentaire</span></a>
+                <a href="eau-hygiene-assainissement.html" class="flex items-center gap-3 py-3 border-b border-slate-300 hover:text-slate-950 text-slate-700 transition-colors"><i class="fa-solid fa-droplet w-5 text-center text-slate-500"></i><span class="font-medium">Eau, hygiène et assainissement</span></a>
+                <a href="cohabitation-pacifique.html" class="flex items-center gap-3 py-3 border-b border-slate-300 hover:text-slate-950 text-slate-700 transition-colors"><i class="fa-solid fa-dove w-5 text-center text-slate-500"></i><span class="font-medium">Cohabitation pacifique</span></a>
+                <a href="protection-environnement.html" class="flex items-center gap-3 py-3 border-b border-slate-300 hover:text-slate-950 text-slate-700 transition-colors"><i class="fa-solid fa-tree w-5 text-center text-slate-500"></i><span class="font-medium">Protection de l’environnement</span></a>
+            </div>
+        </div>
+    </section>
+
+<footer class="smyrne-footer bg-[#282828] text-gray-200 !p-0">
+        <div class="max-w-6xl mx-auto px-6">
+
+            <div class="flex items-center justify-between gap-4 py-8 border-b border-white/10">
+                <a href="index.html" class="flex items-center gap-3">
+                    <img src="bonj.png" alt="Logo" class="h-12 rounded-full">
+                    <span class="text-white font-bold tracking-wider text-lg">SMYRNE</span>
+                </a>
+                <a href="donner.html" class="inline-flex items-center px-6 py-2 rounded-full border border-white/70 text-white text-xs font-bold tracking-[0.15em] uppercase hover:bg-white hover:text-gray-900 transition-colors duration-300" data-i18n="faireDon">Faire un don</a>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-x-8 gap-y-10 py-10">
+                <div>
+                    <h6 class="text-lg font-medium text-white mb-6" data-i18n="footerAboutTitle">À propos</h6>
+                    <ul class="space-y-5">
+                        <li><a href="index.html" class="text-[13px] font-bold tracking-wide text-gray-100 hover:text-white hover:underline transition-colors" data-i18n="accueil">Accueil</a></li>
+                        <li><a href="index.html#apropos" class="text-[13px] font-bold tracking-wide text-gray-100 hover:text-white hover:underline transition-colors" data-i18n="apropos">A propos</a></li>
+                        <li><a href="vision.html" class="text-[13px] font-bold tracking-wide text-gray-100 hover:text-white hover:underline transition-colors" data-i18n="visionLink">Notre vision</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h6 class="text-lg font-medium text-white mb-6" data-i18n="departements">Nos départements</h6>
+                    <ul class="space-y-5">
+                        <li><a href="evangelisation.html" class="text-[13px] font-bold tracking-wide text-gray-100 hover:text-white hover:underline transition-colors" data-i18n="titre1">L’Evangélisation et vie des Missions</a></li>
+                        <li><a href="protection-femme.html" class="text-[13px] font-bold tracking-wide text-gray-100 hover:text-white hover:underline transition-colors" data-i18n="titre2">La protection de la femme</a></li>
+                        <li><a href="protection-enfant.html" class="text-[13px] font-bold tracking-wide text-gray-100 hover:text-white hover:underline transition-colors" data-i18n="titre3">La protection de l’enfant</a></li>
+                        <li><a href="securite-alimentaire.html" class="text-[13px] font-bold tracking-wide text-gray-100 hover:text-white hover:underline transition-colors" data-i18n="titre4">La sécurité alimentaire</a></li>
+                        <li><a href="eau-hygiene-assainissement.html" class="text-[13px] font-bold tracking-wide text-gray-100 hover:text-white hover:underline transition-colors" data-i18n="titre5">L’eau, hygiène et assainissement</a></li>
+                        <li><a href="cohabitation-pacifique.html" class="text-[13px] font-bold tracking-wide text-gray-100 hover:text-white hover:underline transition-colors" data-i18n="titre6">La cohabitation pacifique</a></li>
+                        <li><a href="protection-environnement.html" class="text-[13px] font-bold tracking-wide text-gray-100 hover:text-white hover:underline transition-colors" data-i18n="titre7">La protection de l’environnement</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h6 class="text-lg font-medium text-white mb-6" data-i18n="footerInvolvedTitle">S’impliquer</h6>
+                    <ul class="space-y-5">
+                        <li><a href="index.html#programmes" class="text-[13px] font-bold tracking-wide text-gray-100 hover:text-white hover:underline transition-colors" data-i18n="footerPrograms">Nos programmes</a></li>
+                        <li><a href="actualite.html" class="text-[13px] font-bold tracking-wide text-gray-100 hover:text-white hover:underline transition-colors" data-i18n="actualites">Actualités</a></li>
+                        <li><a href="contact.html" class="text-[13px] font-bold tracking-wide text-gray-100 hover:text-white hover:underline transition-colors" data-i18n="contacts">Contacts</a></li>
+                       
+                    </ul>
+                </div>
+                <div>
+                    <h6 class="text-lg font-medium text-white mb-6" data-i18n="footerContactTitle">Contact</h6>
+                    <p class="text-[13px] font-bold tracking-wide text-gray-100 leading-relaxed mb-5">Adresse : n°38, Avenue de la conférence, Quartier Kyeshero, Commune de Goma, Ville de Goma, République Démocratique du Congo</p>
+                    <p class="text-[13px] font-bold tracking-wide text-gray-100">Tél. +243818766836 ; +243994033427</p>
+                </div>
+            </div>
+
+            <div class="flex flex-col-reverse sm:flex-row sm:items-start sm:justify-between gap-6 py-8 border-t border-white/10">
+                <ul class="flex items-center gap-5">
+                    <li><a href="#" aria-label="Facebook" class="text-white hover:opacity-70 transition-opacity"><i class="fab fa-facebook text-[32px]"></i></a></li>
+                    <li><a href="#" aria-label="X" class="text-white hover:opacity-70 transition-opacity"><i class="fab fa-x-twitter text-[30px]"></i></a></li>
+                    <li><a href="#" aria-label="Instagram" class="text-white hover:opacity-70 transition-opacity"><i class="fab fa-instagram text-[32px]"></i></a></li>
+                    <li><a href="#" aria-label="YouTube" class="text-white hover:opacity-70 transition-opacity"><i class="fab fa-youtube text-[34px]"></i></a></li>
+                </ul>
+                <div class="text-sm text-gray-400 sm:text-right">
+                    <p>&copy; <span id="year"></span> CMPS SMYRNE – CEBEC. <span data-i18n="rightsReserved">Tous droits réservés.</span></p>
+                    <p class="text-xs text-gray-500 mt-1">Membre de la CEBEC · Arrêté ministériel n° 019/CAB/ME/MIN/J&amp;GS/2026 du 09 février 2026</p>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+    <script>
+(function () {
+    var languageData = {"fr": {"accueil": "Accueil", "actualites": "Actualités", "apropos": "A propos", "churchName": "SMYRNE", "contacts": "Contacts", "departements": "Nos départements", "faireDon": "Faire un don", "language": "Langue", "rightsReserved": "Tous droits réservés.", "titre1": "L’Evangélisation et vie des Missions", "titre2": "La protection de la femme", "titre3": "La protection de l’enfant", "titre4": "La sécurité alimentaire", "titre5": "L’eau, hygiène et assainissement", "titre6": "La cohabitation pacifique", "titre7": "La protection de l’environnement", "visionLink": "Notre vision", "footerAboutTitle": "À propos", "footerInvolvedTitle": "S’impliquer", "footerContactTitle": "Contact", "footerPrograms": "Nos programmes"}, "en": {"accueil": "Home", "actualites": "News", "apropos": "About", "churchName": " SMYRNA", "contacts": "Contacts", "departements": "Our Departments", "faireDon": "Donate", "language": "Language", "rightsReserved": "All rights reserved.", "titre1": "Evangelism and Missions", "titre2": "Women’s Protection", "titre3": "Child Protection", "titre4": "Food Security", "titre5": "Water, Hygiene and Sanitation", "titre6": "Peaceful Coexistence", "titre7": "Environmental Protection", "visionLink": "Our vision", "footerAboutTitle": "About", "footerInvolvedTitle": "Get involved", "footerContactTitle": "Contact", "footerPrograms": "Our programs"}, "es": {"accueil": "Inicio", "actualites": "Noticias", "apropos": "Acerca de", "churchName": "ESMIRNA", "contacts": "Contactos", "departements": "Nuestros departamentos", "faireDon": "Donar", "language": "Idioma", "rightsReserved": "Todos los derechos reservados.", "titre1": "Evangelización y Misiones", "titre2": "Protección de la Mujer", "titre3": "Protección de la Infancia", "titre4": "Seguridad Alimentaria", "titre5": "Agua, Higiene y Saneamiento", "titre6": "Convivencia Pacífica", "titre7": "Protección del Medio Ambiente", "visionLink": "Nuestra visión", "footerAboutTitle": "Acerca de", "footerInvolvedTitle": "Participar", "footerContactTitle": "Contacto", "footerPrograms": "Nuestros programas"}, "sw": {"accueil": "Mwanzo", "actualites": "Habari", "apropos": "Kuhusu sisi", "churchName": "SMYRNE", "contacts": "Mawasiliano", "departements": "Idara zetu", "faireDon": "Kutoa mchango", "language": "Lugha", "rightsReserved": "Haki zote zimehifadhiwa.", "titre1": "Uinjilisti na Misioni", "titre2": "Ulinzi wa Wanawake", "titre3": "Ulinzi wa Watoto", "titre4": "Usalama wa Chakula", "titre5": "Maji, Usafi na Mazingira", "titre6": "Kuishi kwa Amani", "titre7": "Ulinzi wa Mazingira", "visionLink": "Maono yetu", "footerAboutTitle": "Kuhusu", "footerInvolvedTitle": "Shiriki", "footerContactTitle": "Mawasiliano", "footerPrograms": "Programu zetu"}};
+
+    function setLanguage(lang) {
+        document.querySelectorAll('[data-i18n]').forEach(function (el) {
+            var key = el.getAttribute('data-i18n');
+            if (languageData[lang] && languageData[lang][key]) el.innerHTML = languageData[lang][key];
+        });
+        document.documentElement.lang = lang;
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+        var header = document.querySelector('.smyrne-header');
+        var sidebar = document.getElementById('sidebar');
+        var year = document.getElementById('year');
+        if (year) year.textContent = new Date().getFullYear();
+
+        function onScroll() { header.classList.toggle('scrolled', window.scrollY > 50); }
+        window.addEventListener('scroll', onScroll);
+        onScroll();
+
+        var menuBtn = document.getElementById('menu-btn');
+        var closeBtn = document.getElementById('close-btn');
+        if (menuBtn) menuBtn.addEventListener('click', function () { sidebar.classList.add('open'); sidebar.style.transform = 'translateX(0)'; });
+        if (closeBtn) closeBtn.addEventListener('click', function () { sidebar.classList.remove('open'); sidebar.style.transform = 'translateX(100%)'; });
+
+        var dB = document.getElementById('sidebar-dept-button'), dM = document.getElementById('sidebar-dept-menu');
+        if (dB && dM) dB.addEventListener('click', function () { dM.classList.toggle('hidden'); });
+
+        var lB = document.getElementById('sidebar-language-button'), lM = document.getElementById('sidebar-language-menu');
+        if (lB && lM) lB.addEventListener('click', function () { lM.classList.toggle('hidden'); });
+
+        document.querySelectorAll('[data-lang]').forEach(function (link) {
+            link.addEventListener('click', function (e) {
+                e.preventDefault();
+                setLanguage(link.getAttribute('data-lang'));
+                if (document.activeElement) document.activeElement.blur();
+                if (lM) lM.classList.add('hidden');
+                if (link.closest('#sidebar')) { sidebar.classList.remove('open'); sidebar.style.transform = 'translateX(100%)'; }
+            });
+        });
+
+        setLanguage('fr');
+    });
+})();
+</script>
+
+</body>
+</html>

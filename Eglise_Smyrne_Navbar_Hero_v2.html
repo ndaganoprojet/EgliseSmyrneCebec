@@ -1,0 +1,2253 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title data-i18n="pageTitle">Eglise Smyrne</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Original+Surfer&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Original+Surfer&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Syncopate:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+   <style>
+    @theme {
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-title: 'Cinzel', serif;
+  --font-body: 'Plus Jakarta Sans', sans-serif;
+  --font-subtitle: 'Original Surfer', cursive;
+  --font-titre:'lato', sans-serif;
+ 
+  --color-navy: #0a0f1e;
+  --color-navy-light: #131b35;
+  --color-gold: #c9a84c;
+  --color-gold-light: #e8c96e;
+  --color-gold-pale: #f5e9c8;
+  --color-cream: #faf8f3;
+  --color-warm: #f0ebe0;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+/*Zoom effect for the header section*/
+
+@keyframes zoomOut {
+    0% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1.0);
+    }
+}
+
+.animate-zoom-out {
+    animation: zoomOut 10s ease-out forwards;
+}
+body {
+  margin: 0;
+  font-family: 'Poppins', system-ui, sans-serif;
+  background: #faf8f3;
+  color: #1a1a2e;
+  overflow-x: hidden;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: #0a0f1e; }
+::-webkit-scrollbar-thumb { background: #f8f8f7; border-radius: 10px; }
+    .video-wrapper {
+    width: 100%;
+    max-width: 90%; /* This is the width on small screens */
+    margin: 0 auto;
+}
+   .video-container {
+    /* Sets up a responsive ratio for the video */
+    position: relative;
+    width: 90%;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio (9 / 16 * 100) */
+    height: 0;
+    overflow: hidden;
+    margin: 1rem auto;
+    left:0;
+    right:0;
+}
+
+.video-container iframe {
+    /* Stretches the iframe to fill the container while maintaining aspect ratio */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 90%;
+    height: 100%;
+}
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .fade-in {
+            animation: fadeIn 0.6s ease-out forwards;
+        }
+        .nav-link::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 2px;
+            background: #8b8c8d;
+            transition: width 0.3s;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        .sidebar {
+            transition: transform 0.3s ease-in-out;
+            transform: translateX(100%);
+        }
+        .sidebar.open {
+            transform: translateX(0);
+        }
+        .logo-hover {
+            transition: transform 0.3s ease-in-out;
+        }
+        .logo-hover:hover {
+            transform: scale(1.1);
+        }
+        @media (max-width: 1100px) {
+            .hideOnMobile { display: none; }
+            #menu-btn { display: block; }
+        }
+        @media (min-width: 1100px) {
+            #menu-btn { display: none; }
+            .hideOnMobile { display: block; }
+        }
+        .donation-button {
+            font-size: 17px;
+            font-weight: bold;
+            text-align: center;
+            background-color: transparent;
+            color: #d1d5db;
+            border: 2px solid #d1d5db;
+            border-radius: 26px;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            transition: border-color 0.3s ease, color 0.3s ease;
+            z-index: 1;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            padding: 5px 15px;
+            height: fit-content;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            white-space: nowrap;
+        }
+        .donation-button::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 0;
+            background-color: white;
+            transition: height 0.3s ease;
+            z-index: -1;
+            border-radius: 24px;
+        }
+        .donation-button:hover {
+            border-color: white;
+            color: #000;
+        }
+        .donation-button:hover::before {
+            height: 100%;
+        }
+        .donation-button #span {
+            position: relative;
+            z-index: 1;
+        }
+        .fere {
+            display: none;
+        }
+        footer {
+            background-color: #1a202c;
+            color: #d1d5db;
+            padding: 48px 24px;
+            font-family: 'Poppins', sans-serif;
+        }
+        .containers {
+            display: flex;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+            flex-wrap: wrap;
+            gap: 24px;
+        }
+        .footer-content {
+            flex: 1;
+            min-width: 250px;
+            text-align: left;
+        }
+        .footer-content.center {
+            text-align: center;
+        }
+        .footer-content.right {
+            text-align: right;
+        }
+        .footer-content h5,
+        .footer-content h2,
+        .footer-content h6 {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 16px;
+        }
+        .footer-content p {
+            line-height: 1.5;
+            margin-bottom: 8px;
+        }
+        .footer-content p i {
+            margin-right: 8px;
+        }
+        .footer-content .list1 {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+        }
+        .footer-content .list1 li {
+            margin-bottom: 8px;
+        }
+        .footer-content .list1 li a {
+            color: #d1d5db;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .footer-content .list1 li a:hover {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+        #social {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            gap: 0.5rem;
+            justify-content: center;
+            margin-top: 16px;
+        }
+        #social li i {
+            font-size: 1.5rem;
+            color: #d1d5db;
+            transition: color 0.3s;
+        }
+        #social li i:hover {
+            color: #ffffff;
+        }
+        #copy {
+            text-align: center;
+            margin-top: 32px;
+            font-size: 0.75rem;
+            color: #6b7280;
+        }
+        @media (max-width: 768px) {
+            .containers {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            .footer-content {
+                width: 100%;
+                min-width: 100%;
+                text-align: center;
+            }
+            .footer-content.left,
+            .footer-content.center,
+            .footer-content.right {
+                text-align: center;
+            }
+            .footer-content > * {
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .footer-content h5,
+            .footer-content h2,
+            .footer-content h6 {
+                text-align: center;
+            }
+            #social {
+                justify-content: center;
+                width: 100%;
+                gap: 0.5rem;
+            }
+            .footer-content .list1 {
+                text-align: center;
+            }
+             .video-container {
+        /* Reduce the video width on small screens */
+        max-width: 95%; /* Adjust this value as needed */
+        margin: 1rem auto; /* Center the container */
+        justify-content: center;
+    
+    }
+     .video-wrapper {
+    width: 100%;
+    max-width: 90%; /* This is the width on small screens */
+    margin: 0 auto;
+}
+    
+        }
+        /* This is the new parent container */
+.flex-centered-wrapper {
+    display: flex; /* Enables flexbox */
+    justify-content: center; /* Horizontally centers content */
+}
+
+/* This is your existing video container with the responsive sizing */
+.video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* Maintains 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    /* On large screens, limit the video to a certain width */
+    max-width: 800px;
+}
+
+/* This targets the video on small screens */
+@media (max-width: 768px) {
+    .video-container {
+        width: 90%; /* This will be 90% of the flex-centered-wrapper */
+    }
+}
+
+/* This makes the iframe fill its parent container */
+.video-container iframe {
+    position: absolute;
+    top: 1rem;
+    left: 0;
+    width: 100%;
+    height: 90%;
+}
+        .footer-donation-button {
+            padding: 8px 16px; 
+            font-size: 16px; 
+            border-radius: 26px;
+            background-color: white;
+            color: black;
+            font-weight: bold;
+            display: inline-block;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        
+    
+/* =========================================================
+   SMYRNE — Premium visual refinement
+   Keeps the existing content, structure and translations.
+   ========================================================= */
+:root{
+  --smyrne-navy:#0a1020;
+  --smyrne-navy-2:#111b32;
+  --smyrne-gold:#c7a65a;
+  --smyrne-gold-light:#ead79b;
+  --smyrne-cream:#fbfaf7;
+  --smyrne-ink:#182033;
+  --smyrne-muted:#667085;
+  --smyrne-line:rgba(10,16,32,.10);
+  --smyrne-radius:22px;
+  --smyrne-shadow:0 18px 55px rgba(10,16,32,.10);
+}
+
+html{scroll-padding-top:90px}
+body{
+  background:var(--smyrne-cream);
+  color:var(--smyrne-ink);
+  font-family:'Plus Jakarta Sans',sans-serif;
+  line-height:1.7;
+}
+::selection{background:var(--smyrne-gold);color:#111}
+
+header{
+  transition:background .35s ease,box-shadow .35s ease,backdrop-filter .35s ease;
+}
+header.scrolled{
+  background:rgba(10,16,32,.88);
+  backdrop-filter:blur(18px);
+  box-shadow:0 8px 30px rgba(0,0,0,.16);
+}
+header nav>div{max-width:1380px}
+header img{filter:drop-shadow(0 8px 18px rgba(0,0,0,.20))}
+
+.nav-link{
+  position:relative;
+  padding:8px 2px;
+  letter-spacing:.01em;
+}
+.nav-link::after{
+  height:1px;
+  background:linear-gradient(90deg,var(--smyrne-gold),var(--smyrne-gold-light));
+}
+.donation-button{
+  border:1px solid rgba(234,215,155,.75);
+  color:#f8f4e8;
+  background:rgba(255,255,255,.035);
+  box-shadow:0 5px 20px rgba(0,0,0,.08);
+}
+.donation-button:hover{color:#111;border-color:var(--smyrne-gold-light)}
+.donation-button::before{background:var(--smyrne-gold-light)}
+
+.entete{
+  border-radius:0!important;
+  min-height:100svh!important;
+  isolation:isolate;
+  background-position:center;
+}
+.entete::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    radial-gradient(circle at 50% 42%,rgba(199,166,90,.15),transparent 32%),
+    linear-gradient(180deg,rgba(5,9,20,.40),rgba(5,9,20,.72));
+  pointer-events:none;
+}
+.entete>div{
+  position:relative;
+  z-index:2;
+  max-width:950px;
+  padding:9rem 1.5rem 5rem;
+}
+.entete h1{
+  font-size:clamp(.85rem,1.7vw,1.15rem)!important;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  color:rgba(255,255,255,.78)!important;
+}
+.entete>div>p:nth-of-type(1){
+  font-family:'Playfair Display',serif!important;
+  font-size:clamp(3.4rem,9vw,7rem)!important;
+  letter-spacing:.08em!important;
+  line-height:.95!important;
+  margin-bottom:2.25rem!important;
+  text-shadow:0 12px 35px rgba(0,0,0,.30);
+}
+.entete>div>p:last-child{
+  max-width:760px;
+  margin-left:auto;
+  margin-right:auto;
+  font-size:clamp(.92rem,2vw,1.08rem)!important;
+  color:rgba(255,255,255,.78)!important;
+}
+.entete::after{
+  content:"";
+  position:absolute;
+  bottom:28px;
+  left:50%;
+  width:1px;
+  height:52px;
+  background:linear-gradient(to bottom,var(--smyrne-gold-light),transparent);
+  opacity:.8;
+}
+
+section:not(.entete){
+  position:relative;
+}
+section:not(.entete)>div{max-width:1180px}
+section h2,section h3,section h4{
+  letter-spacing:-.025em;
+}
+section h2::after,section h3.section-accent::after{
+  content:"";
+  display:block;
+  width:48px;
+  height:2px;
+  margin:16px auto 0;
+  background:var(--smyrne-gold);
+}
+#apropos{background:#fff!important}
+#apropos .md\:w-1\/2:first-child{
+  padding:clamp(0rem,2vw,1.5rem);
+}
+#apropos p{
+  color:#4b5565;
+  font-size:1rem;
+}
+#apropos p:first-child::first-letter{
+  font-family:'Playfair Display',serif;
+  font-size:3.2rem;
+  line-height:.8;
+  float:left;
+  margin:.15rem .45rem 0 0;
+  color:var(--smyrne-gold);
+}
+#myImage img{
+  border-radius:28px!important;
+  box-shadow:0 28px 70px rgba(10,16,32,.16)!important;
+  transition:transform .55s ease,box-shadow .55s ease;
+}
+#myImage img:hover{
+  transform:translateY(-6px) scale(1.012);
+  box-shadow:0 34px 80px rgba(10,16,32,.20)!important;
+}
+
+section.bg-gray-100{
+  background:linear-gradient(180deg,#f4f1e9,#faf9f6)!important;
+}
+section.bg-gray-100 li{
+  border:1px solid rgba(10,16,32,.06);
+  border-left:3px solid var(--smyrne-gold);
+  border-radius:16px!important;
+  padding:22px 26px!important;
+  text-align:left;
+  box-shadow:0 10px 30px rgba(10,16,32,.05)!important;
+  transition:transform .3s ease,box-shadow .3s ease;
+}
+section.bg-gray-100 li:hover{
+  transform:translateY(-3px);
+  box-shadow:0 18px 38px rgba(10,16,32,.09)!important;
+}
+
+.department-card{
+  background:#fff!important;
+  border:1px solid var(--smyrne-line);
+  border-radius:20px!important;
+  min-height:205px;
+  padding:32px 24px!important;
+  box-shadow:0 10px 35px rgba(10,16,32,.055)!important;
+}
+.department-card:hover{
+  transform:translateY(-7px);
+  box-shadow:var(--smyrne-shadow)!important;
+  border-color:rgba(199,166,90,.45);
+}
+.department-card i{
+  transition:transform .35s ease;
+}
+.department-card:hover i{transform:scale(1.1) translateY(-2px)}
+.department-card h3{
+  font-size:1.05rem!important;
+  line-height:1.55;
+  color:var(--smyrne-ink)!important;
+}
+.department-card:nth-child(n) i{color:var(--smyrne-gold)!important}
+.department-card:nth-child(n) h3{color:var(--smyrne-ink)!important}
+
+.organe,.conseil,.partenaire{
+  padding-top:5rem!important;
+  padding-bottom:5rem!important;
+}
+.organe .org>div,.conseil figure{
+  border:1px solid var(--smyrne-line);
+  box-shadow:0 15px 45px rgba(10,16,32,.07)!important;
+  border-radius:22px!important;
+}
+.organe .org>div:hover,.conseil figure:hover{
+  transform:translateY(-5px);
+  box-shadow:0 24px 55px rgba(10,16,32,.12)!important;
+}
+.conseil-img{
+  border:4px solid #fff;
+  box-shadow:0 8px 25px rgba(0,0,0,.10);
+}
+.conseil-card:hover .conseil-img{transform:scale(1.04)}
+
+#croyance{
+  background-position:center;
+  background-attachment:fixed;
+}
+#croyance::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(90deg,rgba(6,12,27,.88),rgba(6,12,27,.60));
+  pointer-events:none;
+}
+#croyance>div{position:relative;z-index:2}
+#croyance .grid>div{
+  padding:18px;
+  border:1px solid rgba(255,255,255,.11);
+  border-radius:16px;
+  background:rgba(255,255,255,.045);
+  backdrop-filter:blur(8px);
+}
+#croyance i{color:var(--smyrne-gold-light)!important}
+
+#priere{background:#fff!important}
+#contact-form{
+  background:#f8f6f1!important;
+  border:1px solid var(--smyrne-line);
+  border-radius:24px!important;
+  box-shadow:0 20px 60px rgba(10,16,32,.08)!important;
+}
+#contact-form input,#contact-form textarea{
+  background:#fff;
+  border:1px solid #dfe2e7;
+  border-radius:12px;
+  padding:13px 15px;
+  transition:border-color .2s,box-shadow .2s;
+}
+#contact-form input:focus,#contact-form textarea:focus{
+  border-color:var(--smyrne-gold)!important;
+  box-shadow:0 0 0 4px rgba(199,166,90,.12)!important;
+}
+#contact-form button{
+  background:var(--smyrne-navy)!important;
+  border-radius:12px!important;
+  letter-spacing:.02em;
+}
+#contact-form button:hover{background:var(--smyrne-navy-2)!important}
+
+.partenaire .grid>div{
+  border:1px solid var(--smyrne-line)!important;
+  border-radius:18px!important;
+  box-shadow:0 10px 35px rgba(10,16,32,.055)!important;
+}
+.partenaire .grid>div:hover{
+  transform:translateY(-5px);
+  border-color:rgba(199,166,90,.55)!important;
+}
+.partnership-cta{
+  background:linear-gradient(135deg,var(--smyrne-navy),#1c2a49)!important;
+  border:1px solid rgba(199,166,90,.28);
+  position:relative;
+  overflow:hidden;
+}
+.partnership-cta::before{
+  content:"";
+  position:absolute;
+  width:220px;height:220px;
+  right:-90px;top:-110px;
+  border:1px solid rgba(234,215,155,.25);
+  border-radius:50%;
+}
+.partnership-cta a{
+  color:var(--smyrne-navy)!important;
+}
+#programmes{
+  background:#f1eee6!important;
+}
+#programmes .grid>div{
+  border:1px solid var(--smyrne-line);
+  border-radius:18px!important;
+  padding:28px 22px!important;
+  box-shadow:0 10px 30px rgba(10,16,32,.06)!important;
+  transition:transform .3s ease,box-shadow .3s ease;
+  position:relative;
+  overflow:hidden;
+}
+#programmes .grid>div::before{
+  content:"";
+  position:absolute;
+  top:0;left:0;right:0;
+  height:3px;
+  background:var(--smyrne-gold);
+}
+#programmes .grid>div:hover{
+  transform:translateY(-6px);
+  box-shadow:0 20px 45px rgba(10,16,32,.11)!important;
+}
+#programmes .grid h3{font-family:'Playfair Display',serif}
+
+.youtube{
+  background:#fff;
+  padding:5rem 1rem 2rem;
+}
+.video-container{
+  max-width:920px!important;
+  border-radius:24px;
+  overflow:hidden;
+  box-shadow:0 22px 60px rgba(10,16,32,.15);
+  background:#0a1020;
+}
+.video-container iframe{top:0!important;height:100%!important}
+
+footer{
+  background:var(--smyrne-navy)!important;
+  border-top:1px solid rgba(199,166,90,.18);
+}
+footer h5{font-family:'Playfair Display',serif}
+footer a:hover{color:var(--smyrne-gold-light)!important}
+#social li a{
+  width:40px;height:40px;
+  display:flex;align-items:center;justify-content:center;
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:50%;
+  transition:all .25s ease;
+}
+#social li a:hover{
+  border-color:var(--smyrne-gold);
+  transform:translateY(-3px);
+}
+#back-to-top{
+  background:var(--smyrne-navy)!important;
+  border:1px solid rgba(255,255,255,.15);
+  box-shadow:0 12px 30px rgba(0,0,0,.18);
+}
+#back-to-top:hover{background:#1b2a49!important}
+
+.reveal{
+  opacity:0;
+  transform:translateY(24px);
+  transition:opacity .7s ease,transform .7s ease;
+}
+.reveal.visible{opacity:1;transform:none}
+
+@media (max-width:768px){
+  .entete>div{padding-top:8rem}
+  .entete>div>p:nth-of-type(1){font-size:3.4rem!important}
+  .entete::after{bottom:18px}
+  section h2{font-size:2.15rem!important}
+  .organe,.conseil,.partenaire{padding-top:3.5rem!important;padding-bottom:3.5rem!important}
+  #croyance{background-attachment:scroll}
+  .youtube{padding-top:3.5rem}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{
+    animation-duration:.01ms!important;
+    animation-iteration-count:1!important;
+    scroll-behavior:auto!important;
+    transition-duration:.01ms!important;
+  }
+}
+
+#scroll-progress{
+  position:fixed;top:0;left:0;height:2px;width:0;
+  background:linear-gradient(90deg,var(--smyrne-gold),var(--smyrne-gold-light));
+  z-index:9999;transition:width .08s linear;
+}
+
+</style>
+
+<style>
+/* =========================================================
+   SMYRNE — NAVBAR + HERO REFINEMENT
+   ========================================================= */
+
+.smyrne-header{
+    top:0;
+    left:0;
+    right:0;
+    background:transparent;
+    transition:background .35s ease, box-shadow .35s ease, transform .35s ease;
+}
+
+.smyrne-nav{
+    width:100%;
+}
+
+.smyrne-nav-inner{
+    width:min(1440px, calc(100% - 48px));
+    min-height:92px;
+    margin:0 auto;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:30px;
+}
+
+.smyrne-brand{
+    display:flex;
+    align-items:center;
+    gap:13px;
+    text-decoration:none;
+    flex-shrink:0;
+}
+
+.smyrne-logo-wrap{
+    width:54px;
+    height:54px;
+    display:grid;
+    place-items:center;
+    border-radius:50%;
+    background:rgba(255,255,255,.96);
+    border:1px solid rgba(232,201,110,.45);
+    box-shadow:0 8px 25px rgba(0,0,0,.22);
+    overflow:hidden;
+}
+
+.smyrne-logo{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+    transition:transform .4s ease;
+}
+
+.smyrne-brand:hover .smyrne-logo{
+    transform:scale(1.06);
+}
+
+.smyrne-brand-copy{
+    display:flex;
+    flex-direction:column;
+    line-height:1;
+}
+
+.smyrne-brand-kicker{
+    color:rgba(255,255,255,.72);
+    font-size:9px;
+    font-weight:600;
+    letter-spacing:.32em;
+    margin-bottom:7px;
+}
+
+.smyrne-brand-name{
+    color:#fff;
+    font-family:'Plus Jakarta Sans', sans-serif;
+    font-size:19px;
+    font-weight:700;
+    letter-spacing:.16em;
+}
+
+.smyrne-desktop-nav{
+    display:flex;
+    align-items:center;
+    gap:28px;
+}
+
+.smyrne-nav-link{
+    position:relative;
+    color:rgba(255,255,255,.78);
+    font-size:13px;
+    font-weight:500;
+    letter-spacing:.02em;
+    text-decoration:none;
+    padding:9px 0;
+    transition:color .25s ease;
+}
+
+.smyrne-nav-link::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:2px;
+    width:0;
+    height:2px;
+    border-radius:999px;
+    background:#e8c96e;
+    transition:width .25s ease;
+}
+
+.smyrne-nav-link:hover,
+.smyrne-nav-link.active{
+    color:#fff;
+}
+
+.smyrne-nav-link:hover::after,
+.smyrne-nav-link.active::after{
+    width:100%;
+}
+
+.smyrne-donate{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    min-height:40px;
+    padding:0 19px;
+    border:1px solid rgba(232,201,110,.85);
+    border-radius:999px;
+    color:#f9f5e9;
+    background:rgba(201,168,76,.10);
+    font-size:12px;
+    font-weight:700;
+    letter-spacing:.02em;
+    text-decoration:none;
+    box-shadow:0 7px 22px rgba(0,0,0,.12);
+    transition:background .25s ease, color .25s ease, transform .25s ease;
+}
+
+.smyrne-donate:hover{
+    background:#e8c96e;
+    color:#0a0f1e;
+    transform:translateY(-2px);
+}
+
+.smyrne-language{
+    position:relative;
+}
+
+.smyrne-language-button{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    padding:9px 0;
+    border:0;
+    background:none;
+    color:rgba(255,255,255,.78);
+    cursor:pointer;
+    font-size:13px;
+    font-family:inherit;
+}
+
+.smyrne-language-button .fa-globe{
+    color:#f3f2ef;
+}
+
+.smyrne-language-button .fa-chevron-down{
+    font-size:9px;
+    transition:transform .2s ease;
+}
+
+.smyrne-language-menu{
+    position:absolute;
+    top:calc(100% + 12px);
+    right:0;
+    width:165px;
+    padding:7px;
+    border:1px solid rgba(255,255,255,.12);
+    border-radius:14px;
+    background:rgba(16,23,42,.97);
+    box-shadow:0 18px 45px rgba(0,0,0,.28);
+    backdrop-filter:blur(18px);
+    opacity:0;
+    visibility:hidden;
+    transform:translateY(-6px);
+    transition:opacity .2s ease, transform .2s ease, visibility .2s ease;
+    z-index:80;
+}
+
+.smyrne-language:hover .smyrne-language-menu,
+.smyrne-language:focus-within .smyrne-language-menu{
+    opacity:1;
+    visibility:visible;
+    transform:translateY(0);
+}
+
+.smyrne-language-menu a{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    padding:10px 11px;
+    border-radius:9px;
+    color:#e5e7eb;
+    text-decoration:none;
+    font-size:12px;
+    transition:background .2s ease, color .2s ease;
+}
+
+.smyrne-language-menu a:hover{
+    background:rgba(232,201,110,.12);
+    color:#fff;
+}
+
+.smyrne-language-menu img{
+    width:21px;
+    height:15px;
+    object-fit:cover;
+    border-radius:2px;
+}
+
+.smyrne-menu-btn{
+    display:none;
+    width:44px;
+    height:44px;
+    padding:10px;
+    border:1px solid rgba(255,255,255,.18);
+    border-radius:12px;
+    background:rgba(10,15,30,.30);
+    backdrop-filter:blur(12px);
+    cursor:pointer;
+}
+
+.smyrne-menu-btn span{
+    display:block;
+    width:20px;
+    height:1.5px;
+    margin:4px auto;
+    background:#fff;
+    border-radius:99px;
+}
+
+/* Header after scrolling */
+.smyrne-header.scrolled{
+    background:rgba(8,13,27,.90);
+    backdrop-filter:blur(18px);
+    box-shadow:0 8px 30px rgba(0,0,0,.18);
+}
+
+.smyrne-header.scrolled .smyrne-nav-inner{
+    min-height:76px;
+}
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.smyrne-hero{
+    position:relative;
+    min-height:100svh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    overflow:hidden;
+    isolation:isolate;
+    background:
+        url('cover.jpg') center center / cover no-repeat;
+    color:#fff;
+}
+
+.smyrne-hero::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    z-index:-3;
+    background:
+        linear-gradient(90deg, rgba(5,10,24,.88) 0%, rgba(7,12,27,.64) 45%, rgba(7,12,27,.44) 100%),
+        linear-gradient(180deg, rgba(4,8,20,.50) 0%, rgba(4,8,20,.14) 45%, rgba(4,8,20,.78) 100%);
+}
+
+.smyrne-hero-overlay{
+    position:absolute;
+    inset:0;
+    z-index:-2;
+    background:radial-gradient(circle at 50% 46%, rgba(232,201,110,.08), transparent 36%);
+}
+
+.smyrne-hero-glow{
+    position:absolute;
+    width:420px;
+    height:420px;
+    border-radius:50%;
+    filter:blur(80px);
+    opacity:.12;
+    z-index:-1;
+    pointer-events:none;
+}
+
+.smyrne-hero-glow-one{
+    top:8%;
+    right:-160px;
+    background:#e8c96e;
+}
+
+.smyrne-hero-glow-two{
+    bottom:-190px;
+    left:-140px;
+    background:#244b8f;
+}
+
+.smyrne-hero-content{
+    width:min(900px, calc(100% - 40px));
+    margin-top:58px;
+    text-align:center;
+    display:flex;
+    align-items:center;
+    flex-direction:column;
+    animation:heroRise .9s ease both;
+}
+
+.smyrne-hero-rule{
+    width:54px;
+    height:2px;
+    margin-bottom:25px;
+    background:linear-gradient(90deg, transparent, #e8c96e, transparent);
+}
+
+.smyrne-hero-eyebrow{
+    margin:0;
+    color:rgba(255,255,255,.80);
+    font-family:'Lato', sans-serif;
+    font-size:15px;
+    font-weight:400;
+    font-style:italic;
+    letter-spacing:.08em;
+}
+
+.smyrne-hero-title{
+    margin:10px 0 17px;
+    font-family:'Playfair Display', Georgia, serif;
+    font-size:clamp(4rem, 10vw, 8.4rem);
+    font-weight:600;
+    line-height:.88;
+    letter-spacing:.075em;
+    color:#fff;
+    text-shadow:0 10px 45px rgba(0,0,0,.35);
+}
+
+.smyrne-hero-subtitle{
+    max-width:720px;
+    margin:0;
+    color:rgba(255,255,255,.76);
+    font-family:'Lato', sans-serif;
+    font-size:14px;
+    line-height:1.8;
+    font-style:italic;
+}
+
+.smyrne-hero-actions{
+    display:flex;
+    align-items:center;
+    gap:13px;
+    margin-top:34px;
+}
+
+.smyrne-hero-primary,
+.smyrne-hero-secondary{
+    min-height:46px;
+    padding:0 21px;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    border-radius:999px;
+    font-size:12px;
+    font-weight:700;
+    text-decoration:none;
+    transition:transform .25s ease, background .25s ease, border-color .25s ease;
+}
+
+.smyrne-hero-primary{
+    color:#101522;
+    background:#e8c96e;
+    box-shadow:0 12px 30px rgba(0,0,0,.18);
+}
+
+.smyrne-hero-primary:hover{
+    transform:translateY(-2px);
+    background:#f2d985;
+}
+
+.smyrne-hero-secondary{
+    color:#fff;
+    border:1px solid rgba(255,255,255,.35);
+    background:rgba(255,255,255,.06);
+    backdrop-filter:blur(10px);
+}
+
+.smyrne-hero-secondary:hover{
+    transform:translateY(-2px);
+    border-color:rgba(232,201,110,.75);
+    background:rgba(232,201,110,.10);
+}
+
+.smyrne-hero-scroll{
+    position:absolute;
+    left:50%;
+    bottom:25px;
+    transform:translateX(-50%);
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:7px;
+    color:rgba(255,255,255,.48);
+    font-size:8px;
+    letter-spacing:.28em;
+}
+
+.smyrne-hero-scroll i{
+    color:#e8c96e;
+    font-size:10px;
+    animation:heroArrow 1.7s ease-in-out infinite;
+}
+
+@keyframes heroRise{
+    from{opacity:0; transform:translateY(22px);}
+    to{opacity:1; transform:translateY(0);}
+}
+
+@keyframes heroArrow{
+    0%,100%{transform:translateY(0);}
+    50%{transform:translateY(5px);}
+}
+
+/* Mobile */
+@media (max-width:1099px){
+    .smyrne-nav-inner{
+        width:min(100% - 28px, 720px);
+        min-height:78px;
+    }
+
+    .smyrne-desktop-nav{
+        display:none;
+    }
+
+    .smyrne-menu-btn{
+        display:block;
+    }
+
+    .smyrne-logo-wrap{
+        width:48px;
+        height:48px;
+    }
+
+    .smyrne-brand-kicker{
+        font-size:8px;
+    }
+
+    .smyrne-brand-name{
+        font-size:17px;
+    }
+
+    .smyrne-hero-content{
+        margin-top:40px;
+    }
+
+    .smyrne-hero-eyebrow{
+        font-size:13px;
+    }
+
+    .smyrne-hero-subtitle{
+        font-size:13px;
+        max-width:550px;
+    }
+}
+
+@media (max-width:520px){
+    .smyrne-nav-inner{
+        width:calc(100% - 24px);
+    }
+
+    .smyrne-brand{
+        gap:10px;
+    }
+
+    .smyrne-logo-wrap{
+        width:43px;
+        height:43px;
+    }
+
+    .smyrne-brand-name{
+        font-size:15px;
+        letter-spacing:.13em;
+    }
+
+    .smyrne-hero-content{
+        width:calc(100% - 30px);
+        margin-top:38px;
+    }
+
+    .smyrne-hero-title{
+        font-size:clamp(3.4rem, 18vw, 5.2rem);
+        letter-spacing:.055em;
+    }
+
+    .smyrne-hero-eyebrow{
+        max-width:320px;
+        line-height:1.6;
+    }
+
+    .smyrne-hero-subtitle{
+        font-size:12px;
+        line-height:1.7;
+    }
+
+    .smyrne-hero-actions{
+        flex-direction:column;
+        width:100%;
+        max-width:260px;
+    }
+
+    .smyrne-hero-primary,
+    .smyrne-hero-secondary{
+        width:100%;
+    }
+
+    .smyrne-hero-scroll{
+        display:none;
+    }
+}
+
+@media (prefers-reduced-motion:reduce){
+    .smyrne-hero-content,
+    .smyrne-hero-scroll i,
+    .smyrne-logo{
+        animation:none!important;
+        transition:none!important;
+    }
+}
+</style>
+
+</head>
+<body class="font-body text-gray-900 bg-white">
+    <header class="smyrne-header fixed w-full z-50">
+    <nav class="smyrne-nav">
+        <div class="smyrne-nav-inner">
+            <a href="index.html" class="smyrne-brand" aria-label="Eglise Smyrne - Accueil">
+                <span class="smyrne-logo-wrap">
+                    <img src="bonj.png" alt="Logo Eglise Smyrne" class="smyrne-logo">
+                </span>
+                <span class="smyrne-brand-copy">
+                    <span class="smyrne-brand-kicker">ÉGLISE</span>
+                    <span class="smyrne-brand-name" data-i18n="churchName">SMYRNE</span>
+                </span>
+            </a>
+
+            <div class="smyrne-desktop-nav">
+                <a href="index.html" class="smyrne-nav-link active" data-i18n="accueil">Accueil</a>
+                <a href="departement.html" class="smyrne-nav-link" data-i18n="departements">Départements</a>
+                <a href="actualite.html" class="smyrne-nav-link" data-i18n="actualites">Actualités</a>
+                <a href="contact.html" class="smyrne-nav-link" data-i18n="contacts">Contactes</a>
+
+                <a href="donner.html" class="smyrne-donate" data-i18n="faireDon">
+                    Faire un don
+                </a>
+
+                <div class="smyrne-language">
+                    <button id="language-dropdown-button" class="smyrne-language-button" aria-expanded="false">
+                        <i class="fa-solid fa-globe"></i>
+                        <span data-i18n="language">Langue</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div id="language-dropdown-menu" class="smyrne-language-menu">
+                        <a href="#" data-lang="fr"><img src="https://flagicons.lipis.dev/flags/4x3/fr.svg" alt=""> Français</a>
+                        <a href="#" data-lang="en"><img src="https://flagicons.lipis.dev/flags/4x3/gb.svg" alt=""> English</a>
+                        <a href="#" data-lang="es"><img src="https://flagicons.lipis.dev/flags/4x3/es.svg" alt=""> Español</a>
+                        <a href="#" data-lang="sw"><img src="https://flagicons.lipis.dev/flags/4x3/tz.svg" alt=""> Swahili</a>
+                    </div>
+                </div>
+            </div>
+
+            <button id="menu-btn" class="smyrne-menu-btn" aria-label="Ouvrir le menu" aria-controls="sidebar">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+</header>
+    <div id="scroll-progress" aria-hidden="true"></div>
+
+    <div class="fere stick">
+        <a href="donner.html" class="donation-button text-sm" data-i18n="faireDon">
+            <span id="span">Faire un don</span>
+        </a>
+    </div>
+    <div id="sidebar" class="sidebar fixed top-0 right-0 w-3/4 max-w-sm h-full bg-gray-900 bg-opacity-95 backdrop-blur-md text-white shadow-xl z-50">
+        <div class="p-6 flex justify-end">
+            <button id="close-btn" class="focus:outline-none">
+                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+        </div>
+        <ul class="flex flex-col space-y-4 text-center text-lg font-medium">
+            <li><a href="index.html" class="block py-2 hover:bg-gray-800 transition-colors" data-i18n="accueil">Accueil</a></li>
+
+            <li><a href="departement.html" class="block py-2 hover:bg-gray-800 transition-colors" data-i18n="departements">Départements</a></li>
+            <li><a href="actualite.html" class="block py-2 hover:bg-gray-800 transition-colors" data-i18n="actualites">Actualités</a></li>
+            <li><a href="contact.html" class="block py-2 hover:bg-gray-800 transition-colors" data-i18n="contacts">Contactes</a></li>
+            <li class="relative group">
+                <button id="sidebar-language-button" class="flex items-center justify-center w-full py-2 hover:bg-gray-800 focus:outline-none">
+                    <span data-i18n="language">Langue</span>
+                    <svg class="w-4 h-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </button>
+                <div id="sidebar-language-menu" class="hidden text-left bg-gray-800 mx-4 rounded-md">
+                    <a href="#" class="flex items-center px-4 py-2 text-sm text-gray-300 hover:bg-gray-700" data-lang="fr">
+                        <img src="https://flagicons.lipis.dev/flags/4x3/fr.svg" alt="French Flag" class="h-4 w-6 mr-2"> Français
+                    </a>
+                    <a href="#" class="flex items-center px-4 py-2 text-sm text-gray-300 hover:bg-gray-700" data-lang="en">
+                        <img src="https://flagicons.lipis.dev/flags/4x3/gb.svg" alt="English Flag" class="h-4 w-6 mr-2"> English
+                    </a>
+                    <a href="#" class="flex items-center px-4 py-2 text-sm text-gray-300 hover:bg-gray-700" data-lang="es">
+                        <img src="https://flagicons.lipis.dev/flags/4x3/es.svg" alt="Spanish Flag" class="h-4 w-6 mr-2"> Español
+                    </a>
+                    <a href="#" class="flex items-center px-4 py-2 text-sm text-gray-300 hover:bg-gray-700" data-lang="sw">
+                        <img src="https://flagicons.lipis.dev/flags/4x3/tz.svg" alt="Swahili Flag" class="h-4 w-6 mr-2"> Swahili
+                    </a>
+                </div>
+            </li>
+            <li><a href="donner.html" class="block mt-4 mx-6 px-6 py-2 bg-white text-black font-bold rounded-full hover:bg-gray-200 transition-colors" data-i18n="faireDon">Faire un don</a></li>
+        </ul>
+    </div>
+</div>
+
+    <section class="smyrne-hero" id="haut" aria-label="Présentation de l'Eglise Smyrne">
+    <div class="smyrne-hero-overlay"></div>
+    <div class="smyrne-hero-glow smyrne-hero-glow-one"></div>
+    <div class="smyrne-hero-glow smyrne-hero-glow-two"></div>
+
+    <div class="smyrne-hero-content">
+        <div class="smyrne-hero-rule"></div>
+
+        <p class="smyrne-hero-eyebrow" data-i18n="heroTitle">
+            Communauté des Missions de Pentecôte
+        </p>
+
+        <h1 class="smyrne-hero-title">SMYRNE</h1>
+
+        <p class="smyrne-hero-subtitle" data-i18n="heroAddress">
+            Adresse : n°38, Avenue de la conférence, Quartier Kyeshero, Commune de Goma, Ville de Goma, République Démocratique du Congo
+        </p>
+
+        <div class="smyrne-hero-actions">
+            <a href="#apropos" class="smyrne-hero-primary">
+                <span>Découvrir Smyrne</span>
+                <i class="fa-solid fa-arrow-down"></i>
+            </a>
+            <a href="donner.html" class="smyrne-hero-secondary" data-i18n="faireDon">
+                Faire un don
+            </a>
+        </div>
+    </div>
+
+    <div class="smyrne-hero-scroll" aria-hidden="true">
+        <span>SCROLL</span>
+        <i class="fa-solid fa-arrow-down"></i>
+    </div>
+</section>
+
+    <a href="#haut" id="back-to-top" class="back-to-top fixed bottom-8 right-8 bg-gray-900 p-4 rounded-full shadow-lg opacity-0 invisible hover:bg-blue-600 transition-colors duration-300 z-40">
+        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF"><path d="M480-528 296-344l-56-56 240-240 240 240-56 56-184-184Z"/></svg>
+    </a>
+
+    <section id="apropos" class="py-16 px-4 bg-white fade-in" style="animation-delay: 0.6s;">
+        <div class="container mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-8 text-gray-900" data-i18n="aproposTitle">A Propos</h2>
+            <div class="flex flex-col md:flex-row items-center justify-center gap-12">
+                <div class="md:w-1/2">
+                    <p class="text-lg leading-relaxed mb-6" data-i18n="aproposText1">
+                        Membre de la Fédération Internationale des Eglises Chrétiennes évangélique, la CMPS est une communauté Pentecôtiste crée à Goma en Octobre 2014, par un groupe des pasteurs selon l’appel de Dieu faite au Pasteur <b>Patrick MULENGEZI</b>.
+                    </p>
+                    <p class="text-lg leading-relaxed mb-6" data-i18n="aproposText2">
+                        Nous sommes une jeune communauté mais cela ne nous arrête pas. Nous allons de l’avant, sachant que nous sommes pentecôtistes avec la ferme assurance du Seigneur : « Mais vous recevrez une puissance, le Saint-Esprit survenant sur vous, et vous serez mes témoins à Jérusalem, dans toute la Judée, dans la Samarie, et jusqu’aux extrémités de la terre » Actes 1 :8.
+                    </p>
+                    <p class="text-lg leading-relaxed" data-i18n="aproposText3">
+                        Dieu nous utilise pour l’avancement de son œuvre et Il nous utilisera de plus en plus. Nous croyons qu’Il a de grandes et merveilleuses choses en réserve pour nous. Ensemble, nous allons rejoindre des gens que personne d’autre ne peut rejoindre et nous allons marquer cette génération.
+                    </p>
+                </div>
+                <div class="md:w-1/2 flex justify-center" id="myImage">
+                    <img src="plus%20(1).jpeg" alt="Eglise Smyrne" class="rounded-3xl shadow-lg w-full max-w-md h-auto object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 px-4 bg-gray-100 text-gray-900 fade-in" style="animation-delay: 0.8s;">
+        <div class="container mx-auto text-center">
+            <h3 class="text-4xl font-bold mb-12" data-i18n="notreButTitle">Notre But</h3>
+            <ul class="list-none space-y-6 text-lg max-w-4xl mx-auto">
+                <li class="p-4 rounded-lg bg-white shadow-sm" data-i18n="but1">Proclamer l’évangile du salut conformément à l’ordonnance de Jésus Christ Notre Seigneur selon Matthieu 28 : 19-20 ; Marc 16 : 15-16 ; Jean 20 : 21 et la création des missions locales.</li>
+                <li class="p-4 rounded-lg bg-white shadow-sm" data-i18n="but2">Promouvoir le développement social, économique et culturel des populations par l’élaboration et l’exécution des programmes et des projets de développement tel que la création des écoles, l’organisation des œuvres sociales : médias communautaires, hôpitaux et centres de Santé, foyers sociaux, centres d’encadrement des personnes vulnérables, etc.</li>
+                <li class="p-4 rounded-lg bg-white shadow-sm" data-i18n="but3">Organiser toute autre activité d’intérêt général compatible avec la mission de la communauté.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="depart" class="py-16 px-4 fade-in" style="animation-delay: 1.0s;">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-bold text-gray-900 mb-8" data-i18n="departementsTitle">Nos Départements</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 text-center">
+                <div class="bg-gray-100 p-8 rounded-lg shadow-md transition-all duration-300 department-card flex flex-col justify-between">
+                    <div>
+                        <div class="mb-4">
+                            <i class="fas fa-bullhorn text-4xl text-blue-600"></i>
+                        </div>
+                        <h3 class="text-2xl font-semibold mb-4 text-blue-600" data-i18n="titre1">Le département de l’Evangélisation et vie de Missions</h3>
+                    </div>
+                </div>
+                <div class="bg-gray-100 p-8 rounded-lg shadow-md transition-all duration-300 department-card flex flex-col justify-between">
+                    <div>
+                        <div class="mb-4">
+                            <i class="fas fa-graduation-cap text-4xl text-pink-500"></i>
+                        </div>
+                        <h3 class="text-2xl font-semibold mb-4 text-pink-500" data-i18n="titre2">Le département de l’Education</h3>
+                    </div>
+                </div>
+                <div class="bg-gray-100 p-8 rounded-lg shadow-md transition-all duration-300 department-card flex flex-col justify-between">
+                    <div>
+                        <div class="mb-4">
+                            <i class="fas fa-chart-line text-4xl text-yellow-500"></i>
+                        </div>
+                        <h3 class="text-2xl font-semibold mb-4 text-yellow-500" data-i18n="titre3">Le Bureau de développement</h3>
+                    </div>
+                </div>
+                <div class="bg-gray-100 p-8 rounded-lg shadow-md transition-all duration-300 department-card flex flex-col justify-between">
+                    <div>
+                        <div class="mb-4">
+                            <i class="fas fa-medkit text-4xl text-purple-600"></i>
+                        </div>
+                        <h3 class="text-2xl font-semibold mb-4 text-purple-600" data-i18n="titre4">Le département des œuvres médicales</h3>
+                    </div>
+                </div>
+                <div class="bg-gray-100 p-8 rounded-lg shadow-md transition-all duration-300 department-card flex flex-col justify-between">
+                    <div>
+                        <div class="mb-4">
+                            <i class="fas fa-hands-holding-child text-4xl text-green-600"></i>
+                        </div>
+                        <h3 class="text-2xl font-semibold mb-4 text-green-600" data-i18n="titre5">Le département du Genre, famille et enfant</h3>
+                    </div>
+                </div>
+                <div class="bg-gray-100 p-8 rounded-lg shadow-md transition-all duration-300 department-card flex flex-col justify-between">
+                    <div>
+                        <div class="mb-4">
+                            <i class="fas fa-users text-4xl text-blue-600"></i>
+                        </div>
+                        <h3 class="text-2xl font-semibold mb-4 text-blue-600" data-i18n="titre6">Le département de la jeunesse</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-12 text-center">
+                <a href="departement.html" class="inline-flex items-center text-black-600 font-bold text-lg hover:underline transition-colors duration-300">
+                    <span data-i18n="enSavoirPlus">En savoir plus</span>
+                    <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <section class="organe container mx-auto px-4 py-12 fade-in" style="animation-delay: 1.4s;">
+        <div class="admin text-center mb-10">
+            <h4 class="text-3xl font-bold text-gray-800 mb-8" data-i18n="adminBodiesTitle">Organes d'Administration</h4>
+            <p class="text-lg text-gray-600" data-i18n="adminBodiesDesc">
+                La Communauté des Missions de Pentecôte Smyrne est structurée autour des organes de direction suivants :
+            </p>
+        </div>
+
+        <div class="org grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="bg-white p-6 rounded-2xl shadow-lg flex flex-col items-center text-center transition-transform hover:scale-105">
+                <h5 class="text-xl font-semibold text-gray-700 mb-4" data-i18n="nationalLevelTitle">Au niveau national :</h5>
+                <ul class="list-disc list-inside ml-4 space-y-1 text-gray-600 text-left w-full max-w-xs">
+                    <li data-i18n="nationalLevelItem1">L’Assemblée générale</li>
+                    <li data-i18n="nationalLevelItem2">Le conseil exécutif</li>
+                </ul>
+            </div>
+
+            <div class="bg-white p-6 rounded-2xl shadow-lg flex flex-col items-center text-center transition-transform hover:scale-105">
+                <h5 class="text-xl font-semibold text-gray-700 mb-4" data-i18n="provincialLevelTitle">Au niveau provincial :</h5>
+                <ul class="list-disc list-inside ml-4 space-y-1 text-gray-600 text-left w-full max-w-xs">
+                    <li data-i18n="provincialLevelItem1">Les provinces ecclésiastiques</li>
+                    <li data-i18n="provincialLevelItem2">Les Missions locales</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="conseil container mx-auto px-4 py-12 fade-in" style="animation-delay: 1.6s;">
+        <div class="text-center mb-10">
+            <h4 class="text-3xl font-bold text-gray-800 mb-8" data-i18n="conseilExecutifTitle">Le Conseil Exécutif</h4>
+            <p class="text-lg text-gray-600" data-i18n="conseilExecutifDesc">Le conseil exécutif est l’organe d’administration et d’exécution. Il est constitué de :</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+            <figure class="bg-white p-6 rounded-2xl shadow-lg flex flex-col items-center text-center transition-all duration-300 conseil-card">
+                <img src="p.jpg" alt="Pasteur Patrick MULENGEZI" class="w-48 h-48 object-cover rounded-full mb-4 transition-transform duration-300 conseil-img">
+
+                <figcaption class="text-lg font-semibold text-gray-700">
+                    <span data-i18n="legalRepresentative">Le Représentant Légal</span>
+                    <span class="block text-gray-900 font-bold mt-1">Pasteur Patrick MULENGEZI</span>
+                </figcaption>
+            </figure>
+
+            <figure class="bg-white p-6 rounded-2xl shadow-lg flex flex-col items-center text-center transition-all duration-300 conseil-card">
+                <img src="p.jpg" alt="Pasteur Justin MINANI KABINGU" class="w-48 h-48 object-cover rounded-full mb-4 transition-transform duration-300 conseil-img">
+
+                <figcaption class="text-lg font-semibold text-gray-700">
+                    <span data-i18n="legalRepresentativeDeputy">Le Représentant Légal adjoint</span>
+                    <span class="block text-gray-900 font-bold mt-1">Pasteur Justin MINANI KABINGU</span>
+                </figcaption>
+            </figure>
+
+            <figure class="bg-white p-6 rounded-2xl shadow-lg flex flex-col items-center text-center transition-all duration-300 conseil-card">
+                <img src="p.jpg" alt="Mme Julie NGOY VICTORINE" class="w-48 h-48 object-cover rounded-full mb-4 transition-transform duration-300 conseil-img">
+
+                <figcaption class="text-lg font-semibold text-gray-700">
+                    <span data-i18n="financeDirector">La Directrice des finances</span>
+                    <span class="block text-gray-900 font-bold mt-1">Mme Julie NGOY VICTORINE</span>
+                </figcaption>
+            </figure>
+
+        </div>
+    </section>
+
+    <section id="croyance" class="py-16 px-4 relative bg-gray-900 text-white bg-cover bg-center bg-fixed fade-in" style="background-image: url('https://images.unsplash.com/photo-1543360431-7e7931c801b6?q=80&w=2070&auto=format&fit=crop'); animation-delay: 1.2s;">
+        <div class="absolute inset-0 bg-black opacity-50"></div>
+        <div class="container mx-auto text-center relative z-10">
+            <h2 class="text-4xl font-bold mb-8" data-i18n="croyanceTitle">Nos Croyances</h2>
+            <div class="max-w-4xl mx-auto text-lg leading-relaxed">
+                <p data-i18n="croyanceIntro" class="mb-8">
+                    <span class="font-semibold tracking-wide">Notre foi est tirée de la Bible, notre unique référence.</span>
+                </p>
+                <div class="grid md:grid-cols-2 gap-8 text-left mt-4">
+                    <div class="flex items-center space-x-4">
+                        <i class="fas fa-church text-3xl text-yellow-400"></i>
+                        <p data-i18n="belief1" class="text-lg">La Trinité divine (père, fils et saint esprit).</p>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                        <i class="fas fa-bible text-3xl text-yellow-400"></i>
+                        <p data-i18n="belief2" class="text-lg">La bible est la parole infaillible de Dieu.</p>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                        <i class="fas fa-cross text-3xl text-yellow-400"></i>
+                        <p data-i18n="belief3" class="text-lg">Le salut par la grace de Dieu.</p>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                        <i class="fas fa-fire text-3xl text-yellow-400"></i>
+                        <p data-i18n="belief4" class="text-lg">Le Saint-Esprit.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="priere" class="py-16 px-4 bg-white fade-in" style="animation-delay: 1.8s;">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-bold text-gray-900 mb-8" data-i18n="prayerRequestTitle">Demande de prière</h2>
+            <p class="text-lg text-gray-700 mb-8 max-w-3xl mx-auto" data-i18n="prayerRequestDesc">
+                La prière est la force de l'Eglise Smyrne, nous pouvons prier pour vous. Veuillez remplir le formulaire ci-dessous.
+            </p>
+            <form class="max-w-xl mx-auto bg-gray-100 p-8 rounded-lg shadow-md" id="contact-form" action="https://formspree.io/f/mwpqjapz" method="post">
+                <div class="mb-6 text-left">
+                    <label for="name" class="block text-gray-700 font-medium mb-2" data-i18n="name">Nom</label>
+                    <input type="text" id="name" name="name" placeholder="Entrez votre nom" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600" required>
+                </div>
+                <div class="mb-6 text-left">
+                    <label for="email" class="block text-gray-700 font-medium mb-2" data-i18n="email">Adresse mail</label>
+                    <input type="email" id="email" name="email" placeholder="Entrez votre email" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600" required>
+                </div>
+                <div class="mb-6 text-left">
+                    <label for="message" class="block text-gray-700 font-medium mb-2" data-i18n="prayerRequestMessage">Requête de prière</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Écrivez votre requête" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 resize-none" required></textarea>
+                </div>
+                <input type="hidden" name="subject" value="Demande de prière" id="subject">
+
+                <button type="submit" class="w-full bg-gray-900 text-white font-bold py-3 rounded-lg hover:bg-gray-800 transition-colors duration-300" data-i18n="send">
+                    Envoyer
+                </button>
+            </form>
+           <div id="form-status" class="mt-4 text-center text-sm"></div>
+        </div>
+    </section>
+    
+    <section id="partenaires" class="partenaire container mx-auto px-4 py-12 fade-in" style="animation-delay: 2.0s;">
+        <div class="text-center mb-10">
+            <h2 class="text-3xl font-bold text-gray-800 mb-8" data-i18n="partnersTitle">Nos Partenaires</h2>
+            <p class="text-lg text-gray-600 max-w-4xl mx-auto" data-i18n="partnersDesc">
+                Pour bien atteindre son but, la Communauté des Missions de Pentecôte Smyrne « CMPS » travaille avec des Églises Chrétiennes locales et internationales et des Associations chrétiennes ou des particuliers qui ont accepté le partenariat pour la bonne marche de l'œuvre de Dieu.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            <div class="bg-white p-6 rounded-2xl shadow-xl border border-gray-200 transition-all duration-300 hover:shadow-2xl hover:border-indigo-400">
+                <h5 class="text-xl font-semibold text-gray-800 mb-2">Église 8ème CEPAC TUMAINI culte francophone</h5>
+                <p class="text-gray-600">Contact : Pasteur KEBA MATWARA</p>
+                <p class="text-gray-600">Tél. : +243 81 2145 372</p>
+                <p class="text-gray-600">Email : <a href="mailto:cepactumainifr@gmail.com" class="text-indigo-600 hover:underline">cepactumainifr@gmail.com</a></p>
+            </div>
+            <div class="bg-white p-6 rounded-2xl shadow-xl border border-gray-200 transition-all duration-300 hover:shadow-2xl hover:border-indigo-400">
+                <h5 class="text-xl font-semibold text-gray-800 mb-2">Église 8ème CEPAC ALLELUYA culte francophone</h5>
+                <p class="text-gray-600">Contact : Pasteur AMANI KUBUYA</p>
+                <p class="text-gray-600">Tél. : +243 85 315 7500</p>
+                <p class="text-gray-600">Email : <a href="mailto:amanikubuya@gmail.com" class="text-indigo-600 hover:underline">amanikubuya@gmail.com</a></p>
+            </div>
+            <div class="bg-white p-6 rounded-2xl shadow-xl border border-gray-200 transition-all duration-300 hover:shadow-2xl hover:border-indigo-400">
+                <h5 class="text-xl font-semibold text-gray-800 mb-2">La Troupe musicale LES CHANTEURS DE LA PROMESSE</h5>
+                <p class="text-gray-600">Contact : +243 991 70 4729</p>
+            </div>
+            <div class="bg-white p-6 rounded-2xl shadow-xl border border-gray-200 transition-all duration-300 hover:shadow-2xl hover:border-indigo-400">
+                <h5 class="text-xl font-semibold text-gray-800 mb-2">ASSOCIATION DES PROPRIÉTAIRES DES KIOSQUES PETITES ET MOYENNES ENTREPRISES</h5>
+                <p class="text-gray-600">Contact : DG BAVUGE SAFARI Daniel, Président National</p>
+                <p class="text-gray-600">Tél. : +243 994 288643</p>
+                <p class="text-gray-600">Email : <a href="mailto:apkpme@gmail.com" class="text-indigo-600 hover:underline">apkpme@gmail.com</a></p>
+            </div>
+            <div class="bg-white p-6 rounded-2xl shadow-xl border border-gray-200 transition-all duration-300 hover:shadow-2xl hover:border-indigo-400">
+                <h5 class="text-xl font-semibold text-gray-800 mb-2">Namwira Falks</h5>
+                <p class="text-gray-600">Email : <a href="mailto:emilenamwira@yahoo.fr" class="text-indigo-600 hover:underline">emilenamwira@yahoo.fr</a></p>
+                <p class="text-gray-600">Tél. : +12048132415</p>
+                <p class="text-gray-600">30 Lamirande Pl., Winnipeg, MB R3V 1N7, Canada</p>
+            </div>
+            <div class="bg-white p-6 rounded-2xl shadow-xl border border-gray-200 transition-all duration-300 hover:shadow-2xl hover:border-indigo-400">
+                <h5 class="text-xl font-semibold text-gray-800 mb-2">Fédération internationale des Églises Chrétiennes évangéliques</h5>
+                <p class="text-gray-600">Email : <a href="mailto:siege@fede-eglises.com" class="text-indigo-600 hover:underline">siege@fede-eglises.com</a></p>
+                <p class="text-gray-600">Site web : <a href="https://www.fede-eglises.com" class="text-indigo-600 hover:underline">www.fede-eglises.com</a></p>
+            </div>
+        </div>
+
+        <div class="partnership-cta bg-indigo-600 text-white p-8 rounded-2xl shadow-lg mt-12 text-center max-w-2xl mx-auto">
+            <h3 class="text-2xl font-bold mb-4" data-i18n="partnershipCtaTitle">Vous voulez devenir notre partenaire ?</h3>
+            <p class="text-lg mb-6" data-i18n="partnershipCtaDesc">Cliquez sur le bouton WhatsApp pour contacter directement le Pasteur Patrick MULENGEZI, Représentant Légal.</p>
+            <a href="https://wa.me/+243994033427" class="inline-block bg-white text-indigo-600 font-bold py-3 px-6 rounded-full shadow-lg hover:bg-gray-100 transition-colors" data-i18n="whatsappBtn">
+                Contacter via WhatsApp
+            </a>
+        </div>
+    </section>
+
+    <section id="programmes" class="py-16 px-4 bg-gray-200 fade-in" style="animation-delay: 2.2s;">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-bold text-gray-900 mb-8" data-i18n="programsTitle">Nos Programmes</h2>
+            <p class="text-lg text-gray-800 mb-8 max-w-3xl mx-auto" data-i18n="programsDesc">
+                Chaque jour de la semaine nous vous invitons à nous rejoindre pour un moment de forte communion avec le Seigneur Jésus-Christ.
+            </p>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="p-6 bg-white rounded-lg shadow-md text-center">
+                    <h3 class="text-xl font-bold text-gray-900 mb-2" data-i18n="program1Title">Lundi & Mardi</h3>
+                    <p class="text-gray-700" data-i18n="program1Desc">Prière d'intercession</p>
+                    <p class="text-gray-700 font-semibold mt-2" data-i18n="program1Time">17H00 - 18H00</p>
+                </div>
+                <div class="p-6 bg-white rounded-lg shadow-md text-center">
+                    <h3 class="text-xl font-bold text-gray-900 mb-2" data-i18n="program2Title">Mercredi</h3>
+                    <p class="text-gray-700" data-i18n="program2Desc">Etude biblique</p>
+                    <p class="text-gray-700 font-semibold mt-2" data-i18n="program2Time">17H00 - 18:30</p>
+                </div>
+                <div class="p-6 bg-white rounded-lg shadow-md text-center">
+                    <h3 class="text-xl font-bold text-gray-900 mb-2" data-i18n="program3Title">Jeudi</h3>
+                    <p class="text-gray-700" data-i18n="program3Desc">Culte de délivrance</p>
+                    <p class="text-gray-700 font-semibold mt-2" data-i18n="program3Time">17H00 - 19H00</p>
+                </div>
+                <div class="p-6 bg-white rounded-lg shadow-md text-center">
+                    <h3 class="text-xl font-bold text-gray-900 mb-2" data-i18n="program4Title">Dimanche</h3>
+                    <p class="text-gray-700" data-i18n="program4Desc">Culte d'adoration</p>
+                    <p class="text-gray-700 font-semibold mt-2" data-i18n="program4Time">08:30 - 10:30</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<section class="youtube">
+    <div class="flex-centered-wrapper">
+        <div class="video-container">
+            <iframe
+                src="https://www.youtube.com/embed/kWqm2eGi8oU?rel=0&modestbranding=1"
+                frameborder="0"
+                allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+</section>
+
+    <footer class="bg-gray-900 text-gray-300 py-12">
+        <div class="containers mx-auto px-6 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">
+            <div class="footer-content">
+                <h5 class="text-xl font-bold text-white mb-4" data-i18n="churchName">EGLISE SMYRNE</h5>
+                <p class="text-sm" data-i18n="address">Adresse : n°38, Avenue de la conférence, Quartier Kyeshero, Commune de Goma, Ville de Goma, République Démocratique du Congo</p>
+                <p class="text-sm mt-2" data-i18n="phone">Tél. +243818766836 ; +243994033427</p>
+            </div>
+            <div class="footer-content">
+                <h5 class="text-xl font-bold text-white mb-4" data-i18n="quickLinksTitle">Liens Rapides</h5>
+                <ul class="space-y-2">
+                    <li><a href="index.html" class="hover:text-white transition-colors duration-200" data-i18n="accueil">Accueil</a></li>
+                    <li><a href="#apropos" class="hover:text-white transition-colors duration-200" data-i18n="apropos">A propos</a></li>
+                    <li><a href="#depart" class="hover:text-white transition-colors duration-200" data-i18n="departements">Nos départements</a></li>
+                    <li><a href="depart - Copy - Copy.html" class="hover:text-white transition-colors duration-200" data-i18n="actualites">Actualités</a></li>
+                    <li><a href="cont.html" class="hover:text-white transition-colors duration-200" data-i18n="contacts">Contacts</a></li>
+                  
+                </ul>
+            </div>
+            <div class="footer-content center">
+                <h5 class="text-xl font-bold text-white mb-4" data-i18n="followUsTitle">Suivez-nous</h5>
+                <ul class="flex space-x-2 mx-auto" id="social">
+                    <li><a href="#" class="hover:text-white transition-colors duration-200"><i class="fab fa-facebook-f text-lg"></i></a></li>
+                    <li><a href="#" class="hover:text-white transition-colors duration-200"><i class="fab fa-twitter text-lg"></i></a></li>
+                    <li><a href="#" class="hover:text-white transition-colors duration-200"><i class="fab fa-instagram text-lg"></i></a></li>
+                    <li><a href="#" class="hover:text-white transition-colors duration-200"><i class="fab fa-youtube text-lg"></i></a></li>
+                </ul>
+            </div>
+            <div class="footer-content">
+                <h5 class="text-xl font-bold text-white mb-4" data-i18n="donationTitle">Faire un don</h5>
+                <p class="text-sm" data-i18n="donationText">Soutenez notre ministère et nos œuvres en faisant un don.</p>
+                <a href="ff.html" class="mt-4 inline-block bg-white text-gray-900 font-bold py-2 px-4 rounded-full hover:bg-gray-200 transition-colors duration-200" data-i18n="donateButton">
+                    Faire un don
+                </a>
+            </div>
+        </div>
+        <div class="text-center mt-8 pt-8 border-t border-gray-700">
+            <p class="text-sm text-gray-500">&copy; <span id="year"></span> EGLISE SMYRNE. <span data-i18n="rightsReserved">Tous droits réservés.</span></p>
+        </div>
+    </footer>
+    <script src="contact.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const sidebar = document.getElementById('sidebar');
+            const menuBtn = document.getElementById('menu-btn');
+            const closeBtn = document.getElementById('close-btn');
+            const langBtn = document.getElementById('language-dropdown-button');
+            const langMenu = document.getElementById('language-dropdown-menu');
+            const sidebarLangBtn = document.getElementById('sidebar-language-button');
+            const sidebarLangMenu = document.getElementById('sidebar-language-menu');
+            const footerYear = document.getElementById('year');
+            const backToTopBtn = document.getElementById('back-to-top');
+
+            if (footerYear) {
+                footerYear.textContent = new Date().getFullYear();
+            }
+
+            if (menuBtn) {
+                menuBtn.addEventListener('click', () => {
+                    sidebar.classList.add('open');
+                    sidebar.style.transform = 'translateX(0)';
+                });
+            }
+
+            if (closeBtn) {
+                closeBtn.addEventListener('click', () => {
+                    sidebar.classList.remove('open');
+                    sidebar.style.transform = 'translateX(100%)';
+                });
+            }
+
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 300) {
+                    backToTopBtn.classList.remove('invisible', 'opacity-0');
+                    backToTopBtn.classList.add('visible', 'opacity-100');
+                } else {
+                    backToTopBtn.classList.remove('visible', 'opacity-100');
+                    backToTopBtn.classList.add('invisible', 'opacity-0');
+                }
+            });
+
+            const languageData = {
+                fr: {
+                    pageTitle: 'Eglise Smyrne',
+                    churchName: 'SMYRNE',
+                    accueil: 'Accueil',
+                    apropos: 'A propos',
+                    departements: 'Départements',
+                    actualites: 'Actualités',
+                    contacts: 'Contacts',
+                    faireDon: 'Faire un don',
+                    language: 'Langue',
+                    heroTitle: 'Communauté des Missions de Pentecôte',
+                    heroSubtitle: '« CMPS » en Sigle',
+                    heroAddress: 'Adresse : n°38, Avenue de la conférence, Quartier Kyeshero, Commune de Goma, Ville de Goma, République Démocratique du Congo',
+                    aproposTitle: 'A Propos',
+                    aproposText1: 'Membre de la Fédération Internationale des Eglises Chrétiennes évangélique, la CMPS est une communauté Pentecôtiste crée à Goma en Octobre 2014, par un groupe des pasteurs selon l’appel de Dieu faite au Pasteur <b>Patrick MULENGEZI</b>.',
+                    aproposText2: 'Nous sommes une jeune communauté mais cela ne nous arrête pas. Nous allons de l’avant, sachant que nous sommes pentecôtistes avec la ferme assurance du Seigneur : « Mais vous recevrez une puissance, le Saint-Esprit survenant sur vous, et vous serez mes témoins à Jérusalem, dans toute la Judée, dans la Samarie, et jusqu’aux extrémités de la terre » Actes 1 :8.',
+                    aproposText3: 'Dieu nous utilise pour l’avancement de son œuvre et Il nous utilisera de plus en plus. Nous croyons qu’Il a de grandes et merveilleuses choses en réserve pour nous. Ensemble, nous allons rejoindre des gens que personne d’autre ne peut rejoindre et nous allons marquer cette génération.',
+                    notreButTitle: 'Notre But',
+                    but1: 'Proclamer l’évangile du salut conformément à l’ordonnance de Jésus Christ Notre Seigneur selon Matthieu 28 : 19-20 ; Marc 16 : 15-16 ; Jean 20 : 21 et la création des missions locales.',
+                    but2: 'Promouvoir le développement social, économique et culturel des populations par l’élaboration et l’exécution des programmes et des projets de développement tel que la création des écoles, l’organisation des œuvres sociales : médias communautaires, hôpitaux et centres de Santé, foyers sociaux, centres d’encadrement des personnes vulnérables, etc.',
+                    but3: 'Organiser toute autre activité d’intérêt général compatible avec la mission de la communauté.',
+                    departementsTitle: 'Nos DépartementS',
+                    titre1:'Le département de l’Evangelisation et vie de Missions',
+                    titre2:'Le département de l’Education',
+                    titre3:'Le Bureau de développement',
+                    titre4:'Le département des oeuvres médicales',
+                     titre5:'Le département du genre, famille et enfant',
+                    titre6:'Le département de la jeunesse',
+                    enSavoirPlus: 'En savoir plus',
+                    adminBodiesTitle: "Organes d'Administration",
+                    adminBodiesDesc: "La Communauté des Missions de Pentecôte Smyrne est structurée autour des organes de direction suivants :",
+                    nationalLevelTitle: "Au niveau national :",
+                    nationalLevelItem1: "L’Assemblée générale",
+                    nationalLevelItem2: "Le conseil exécutif",
+                    provincialLevelTitle: "Au niveau provincial :",
+                    provincialLevelItem1: "Les provinces ecclésiastiques",
+                    provincialLevelItem2: "Les Missions locales",
+                    conseilExecutifTitle: "Le Conseil Exécutif",
+                    conseilExecutifDesc: "Le conseil exécutif est l’organe d’administration et d’exécution. Il est constitué de :",
+                    legalRepresentative: "Le Représentant Légal",
+                    legalRepresentativeDeputy: "Le Représentant Légal adjoint",
+                    financeDirector: "La Directrice des finances",
+                    croyanceTitle: 'Nos Croyances',
+                    croyanceIntro: 'Notre foi est tirée de la Bible, notre unique référence.',
+                    belief1: 'La Trinité divine (père, fils et saint esprit).',
+                    belief2: 'La bible est la parole infaillible de Dieu.',
+                    belief3: 'Le salut par la grace de Dieu.',
+                    belief4: 'Le Saint-Esprit.',
+                    prayerRequestTitle: 'Demande de prière',
+                    prayerRequestDesc: "La prière est la force de l'Eglise Smyrne, nous pouvons prier pour vous. Veuillez remplir le formulaire ci-dessous.",
+                    name: 'Nom',
+                    email: 'Adresse mail',
+                    prayerRequestMessage: 'Requête de prière',
+                    send: 'Envoyer',
+                    partnersTitle: 'Nos Partenaires',
+                    partnersDesc: "Pour bien atteindre son but, la Communauté des Missions de Pentecôte Smyrne « CMPS » travaille avec des Églises Chrétiennes locales et internationales et des Associations chrétiennes ou des particuliers qui ont accepté le partenariat pour la bonne marche de l'œuvre de Dieu.",
+                    partnershipCtaTitle: "Vous voulez devenir notre partenaire ?",
+                    partnershipCtaDesc: "Cliquez sur le bouton WhatsApp pour contacter directement le Pasteur Patrick MULENGEZI, Représentant Légal.",
+                    whatsappBtn: "Contacter via WhatsApp",
+                    programsTitle: "Nos Programmes",
+                    programsDesc: "Chaque jour de la semaine nous vous invitons à nous rejoindre pour un moment de forte communion avec le Seigneur Jésus-Christ.",
+                    program1Title: "Lundi & Mardi",
+                    program1Desc: "Prière d'intercession",
+                    program1Time: "17H00 - 18H00",
+                    program2Title: "Mercredi",
+                    program2Desc: "Etude biblique",
+                    program2Time: "17H00 - 18:30",
+                    program3Title: "Jeudi",
+                    program3Desc: "Culte de délivrance",
+                    program3Time: "17H00 - 19H00",
+                    program4Title: "Dimanche",
+                    program4Desc: "Culte d'adoration",
+                    program4Time: "08:30 - 10:30",
+                    quickLinksTitle: 'Liens Rapides',
+                    followUsTitle: 'Suivez-nous',
+                    donationTitle: 'Faire un don',
+                    donationText: 'Soutenez notre ministère et nos œuvres en faisant un don.',
+                    donateButton: 'Faire un don',
+                    rightsReserved: 'Tous droits réservés.',
+                },
+                en: {
+                    pageTitle: 'Smyrna Church',
+                    churchName: 'SMYRNA CHURCH',
+                    accueil: 'Home',
+                    apropos: 'About',
+                    departements: 'Departments',
+                    actualites: 'News',
+                    contacts: 'Contacts',
+                    faireDon: 'Donate',
+                    language: 'Language',
+                    heroTitle: 'COMMUNITY OF PENTECOST MISSIONS <br> SMYRNA',
+                    heroSubtitle: '« CMPS » in Abbreviation',
+                    heroAddress: 'Address: n°38, Avenue de la conférence, Kyeshero Quarter, Goma Commune, Goma City, Democratic Republic of Congo',
+                    aproposTitle: 'About Us',
+                    aproposText1: 'Member of the International Federation of Evangelical Christian Churches, CMPS is a Pentecostal community created in Goma in October 2014, by a group of pastors following the call of God to Pastor <b>Patrick MULENGEZI</b>.',
+                    aproposText2: 'We are a young community but that does not stop us. We move forward, knowing that we are Pentecostals with the firm assurance of the Lord: "But you will receive power when the Holy Spirit comes on you; and you will be my witnesses in Jerusalem, and in all Judea and Samaria, and to the ends of the earth." Acts 1:8.',
+                    aproposText3: 'God uses us for the advancement of His work and He will use us more and more. We believe that He has great and wonderful things in store for us. Together, we will reach people that no one else can reach and we will make a mark on this generation.',
+                    notreButTitle: 'Our Goal',
+                    but1: 'Proclaim the gospel of salvation in accordance with the ordinance of Jesus Christ our Lord according to Matthew 28:19-20; Mark 16:15-16; John 20:21 and the creation of local missions.',
+                    but2: 'Promote the social, economic and cultural development of populations by designing and implementing development programs and projects such as the creation of schools, the organization of social works: community media, hospitals and health centers, social homes, support centers for vulnerable people, etc.',
+                    but3: 'Organize any other activity of general interest compatible with the mission of the community.',
+                    departementsTitle: 'Our Departments',
+                    enSavoirPlus: 'Learn more',
+                    adminBodiesTitle: "Administrative Bodies",
+                    adminBodiesDesc: "The Community of Pentecost Missions Smyrne is structured around the following governing bodies:",
+                    nationalLevelTitle: "At the national level:",
+                    nationalLevelItem1: "The General Assembly",
+                    nationalLevelItem2: "The executive council",
+                    provincialLevelTitle: "At the provincial level:",
+                    provincialLevelItem1: "Ecclesiastical provinces",
+                    provincialLevelItem2: "Local Missions",
+                    conseilExecutifTitle: "The Executive Council",
+                    conseilExecutifDesc: "The executive council is the administrative and executive body. It consists of:",
+                    legalRepresentative: "The Legal Representative",
+                    legalRepresentativeDeputy: "The Deputy Legal Representative",
+                    financeDirector: "The Director of Finance",
+                    croyanceTitle: 'Our Beliefs',
+                    croyanceIntro: 'Our faith is drawn from the Bible, our only reference.',
+                    belief1: 'The divine Trinity (father, son and holy spirit).',
+                    belief2: 'The Bible is the infallible word of God.',
+                    belief3: 'Salvation by the grace of God.',
+                    belief4: 'The Holy Spirit.',
+                    prayerRequestTitle: 'Make a prayer request',
+                    prayerRequestDesc: "Prayer is the strength of the Smyrne Church, we can pray for you. Please fill out the form below.",
+                    name: 'Name',
+                    email: 'Email address',
+                    prayerRequestMessage: 'Prayer request',
+                         titre1: 'The Department of Evangelism and Missions',
+        titre2: 'The Department of Education',
+        titre3: 'The Development Office',
+        titre4: 'The Department of Medical Works',
+        titre5: 'The Department of Gender, Family, and Children',
+        titre6: 'The Youth Department',
+                    send: 'Send',
+                    partnersTitle: 'Our Partners',
+                    partnersDesc: "To achieve its goal, the Community of Pentecost Missions Smyrne « CMPS » works with local and international Christian Churches and Christian Associations or individuals who have accepted the partnership for the good progress of God's work.",
+                    partnershipCtaTitle: "Do you want to become our partner?",
+                    partnershipCtaDesc: "Click on the WhatsApp button to contact Pastor Patrick MULENGEZI, Legal Representative, directly.",
+                    whatsappBtn: "Contact via WhatsApp",
+                    programsTitle: "Our Programs",
+                    programsDesc: "Every day of the week we invite you to join us for a moment of strong communion with the Lord Jesus Christ.",
+                    program1Title: "Monday & Tuesday",
+                    program1Desc: "Intercession prayer",
+                    program1Time: "5:00 PM - 6:00 PM",
+                    program2Title: "Wednesday",
+                    program2Desc: "Bible study",
+                    program2Time: "5:00 PM - 6:30 PM",
+                    program3Title: "Thursday",
+                    program3Desc: "Deliverance service",
+                    program3Time: "5:00 PM - 7:00 PM",
+                    program4Title: "Sunday",
+                    program4Desc: "Worship service",
+                    program4Time: "8:30 AM - 10:30 AM",
+                    quickLinksTitle: 'Quick Links',
+                    followUsTitle: 'Follow Us',
+                    donationTitle: 'Make a donation',
+                    donationText: 'Support our ministry and our works by making a donation.',
+                    donateButton: 'Donate',
+                    rightsReserved: 'All rights reserved.',
+                },
+                es: {
+                    pageTitle: 'Iglesia Esmirna',
+                    churchName: 'IGLESIA ESMIRNA',
+                    accueil: 'Inicio',
+                    apropos: 'Acerca de',
+                    departements: 'Departamentos',
+                    actualites: 'Noticias',
+                    contacts: 'Contactos',
+                    faireDon: 'Donar',
+                    language: 'Idioma',
+                    heroTitle: 'COMUNIDAD DE MISIONES PENTECOSTALES <br> ESMIRNA',
+                    heroSubtitle: '« CMPS » en Abreviatura',
+                    heroAddress: 'Dirección: n°38, Avenida de la conferencia, Barrio Kyeshero, Comuna de Goma, Ciudad de Goma, República Democrática del Congo',
+                    aproposTitle: 'Acerca de Nosotros',
+                    aproposText1: 'Miembro de la Federación Internacional de Iglesias Cristianas Evangélicas, la CMPS es una comunidad pentecostal creada en Goma en octubre de 2014, por un grupo de pastores según el llamado de Dios al pastor <b>Patrick MULENGEZI</b>.',
+                    aproposText2: 'Somos una comunidad joven pero eso no nos detiene. Avanzamos, sabiendo que somos pentecostales con la firme seguridad del Señor: « Pero recibiréis poder, cuando haya venido sobre vosotros el Espíritu Santo, y me seréis testigos en Jerusalén, en toda Judea, en Samaria, y hasta lo último de la tierra » Hechos 1:8.',
+                    aproposText3: 'Dios nos usa para el avance de su obra y nos usará cada vez más. Creemos que tiene cosas grandes y maravillosas reservadas para nosotros. Juntos, llegaremos a personas a las que nadie más puede llegar y marcaremos esta generación.',
+                    notreButTitle: 'Nuestro Objetivo',
+                    but1: 'Proclamar el evangelio de salvación de acuerdo con la ordenanza de Jesucristo nuestro Señor según Mateo 28:19-20; Marcos 16:15-16; Juan 20:21 y la creación de misiones locales.',
+                    but2: 'Promover el desarrollo social, económico y cultural de las poblaciones mediante la elaboración y ejecución de programas y proyectos de desarrollo como la creación de escuelas, la organización de obras sociales: medios de comunicación comunitarios, hospitales y centros de salud, hogares sociales, centros de apoyo para personas vulnerables, etc.',
+                    but3: 'Organizar cualquier otra actividad de interés general compatible con la misión de la comunidad.',
+                    departementsTitle: 'Nuestros departamentos',
+                    enSavoirPlus: 'Saber más',
+                    adminBodiesTitle: "Órganos de Administración",
+                    adminBodiesDesc: "La Comunidad de Misiones Pentecostales Esmirna está estructurada en torno a los siguientes órganos de gobierno:",
+                    nationalLevelTitle: "A nivel nacional:",
+                    nationalLevelItem1: "La Asamblea General",
+                    nationalLevelItem2: "El consejo ejecutivo",
+                       titre1: 'El Departamento de Evangelización y Misiones',
+        titre2: 'El Departamento de Educación',
+        titre3: 'La Oficina de Desarrollo',
+        titre4: 'El Departamento de Obras Médicas',
+        titre5: 'El Departamento de Género, Familia y Niños',
+        titre6: 'El Departamento de la Juventud',
+                    provincialLevelTitle: "A nivel provincial:",
+                    provincialLevelItem1: "Las provincias eclesiásticas",
+                    provincialLevelItem2: "Las Misiones locales",
+                    conseilExecutifTitle: "El Consejo Ejecutivo",
+                    conseilExecutifDesc: "El consejo ejecutivo es el órgano de administración y ejecución. Está formado por:",
+                    legalRepresentative: "El Representante Legal",
+                    legalRepresentativeDeputy: "El Representante Legal adjunto",
+                    financeDirector: "La Directora de finanzas",
+                    croyanceTitle: 'Nuestras Creencias',
+                    croyanceIntro: 'Nuestra fe se basa en la Biblia, nuestra única referencia.',
+                    belief1: 'La Trinidad divina (padré, hijo y espíritu santo).',
+                    belief2: 'La Biblia es la palabra infalible de Dios.',
+                    belief3: 'La salvación por la gracia de Dios.',
+                    belief4: 'El Espíritu Santo.',
+                    prayerRequestTitle: 'petición de oración',
+                    prayerRequestDesc: "La oración es la fuerza de la Iglesia Esmirna, podemos orar por ti. Por favor, rellene el formulario a continuación.",
+                    name: 'Nombre',
+                    email: 'Dirección de correo electrónico',
+                    prayerRequestMessage: 'Petición de oración',
+                    send: 'Enviar',
+                    partnersTitle: 'Nuestros Socios',
+                    partnersDesc: "Para lograr su objetivo, la Comunidad de Misiones Pentecostales Esmirna « CMPS » trabaja con Iglesias Cristianas locales e internacionales y Asociaciones Cristianas o particulares que han aceptado la asociación para el buen funcionamiento de la obra de Dios.",
+                    partnershipCtaTitle: "¿Quieres ser nuestro socio?",
+                    partnershipCtaDesc: "Haz clic en el botón de WhatsApp para contactar directamente con el pastor Patrick MULENGEZI, Representante Legal.",
+                    whatsappBtn: "Contactar por WhatsApp",
+                    programsTitle: "Nuestros Programas",
+                    programsDesc: "Cada día de la semana te invitamos a unirte a nosotros para un momento de fuerte comunión con el Señor Jesucristo.",
+                    program1Title: "Lunes y Martes",
+                    program1Desc: "Oración de intercesión",
+                    program1Time: "17:00 - 18:00",
+                    program2Title: "Miércoles",
+                    program2Desc: "Estudio bíblico",
+                    program2Time: "17:00 - 18:30",
+                    program3Title: "Jueves",
+                    program3Desc: "Servicio de liberación",
+                    program3Time: "17:00 - 19:00",
+                    program4Title: "Domingo",
+                    program4Desc: "Servicio de adoración",
+                    program4Time: "08:30 - 10:30",
+                    quickLinksTitle: 'Enlaces rápidos',
+                    followUsTitle: 'Síguenos',
+                    donationTitle: 'Hacer una donación',
+                    donationText: 'Apoye nuestro ministerio y nuestras obras haciendo una donación.',
+                    donateButton: 'Donar',
+                    rightsReserved: 'Todos los derechos reservados.',
+                },
+                sw: {
+                    pageTitle: 'Kanisa la Smyrne',
+                    churchName: 'KANISA LA SMYRNE',
+                    accueil: 'Mwanzo',
+                    apropos: 'Kuhusu sisi',
+                    departements: 'Idara zetu',
+                    actualites: 'Habari',
+                    contacts: 'Mawasiliano',
+                    faireDon: 'Kutoa mchango',
+                      titre1: 'Idara ya Uinjilisti na Misioni',
+        titre2: 'Idara ya Elimu',
+        titre3: 'Ofisi ya Maendeleo',
+        titre4: 'Idara ya Kazi za Kimatibabu',
+        titre5: 'Idara ya Jinsia, Familia na Watoto',
+        titre6: 'Idara ya Vijana',
+                    language: 'Lugha',
+                    heroTitle: 'JUMUIYA YA MISIUNI YA PENTEKOSTI <br> SMYRNE',
+                    heroSubtitle: '« CMPS » kwa kifupi',
+                    heroAddress: 'Anwani: n°38, Avenue de la conférence, Mtaa wa Kyeshero, Komune ya Goma, Jiji la Goma, Jamhuri ya Kidemokrasia ya Kongo<br> Simu. +243818766836 ; +243994033427',
+                    aproposTitle: 'Kuhusu sisi',
+                    aproposText1: 'Mwanachama wa Shirikisho la Kimataifa la Makanisa ya Kikristo ya Kiinjili, CMPS ni jumuiya ya Kipentekosti iliyoanzishwa Goma mwezi Oktoba 2014, na kundi la wachungaji kwa mujibu wa wito wa Mungu kwa Mchungaji <b>Patrick MULENGEZI</b>.',
+                    aproposText2: 'Sisi ni jumuiya changa lakini hilo halituzuia. Tunasonga mbele, tukijua kwamba sisi ni Wapenpentekosti kwa uhakika wa Bwana: « Lakini mtapokea nguvu, akisha kuwajilia juu yenu Roho Mtakatifu; nanyi mtakuwa mashahidi wangu katika Yerusalemu, na katika Uyahudi wote, na Samaria, na hata mwisho wa nchi » Matendo 1:8.',
+                    aproposText3: 'Mungu anatutumia kwa ajili ya kuendeleza kazi yake na atatutumia zaidi na zaidi. Tunaamini kwamba ana mambo makuu na ya ajabu ametuwekea akiba. Pamoja, tutawafikia watu ambao hakuna mwingine anayeweza kuwafikia na tutaiacha alama kwenye kizazi hiki.',
+                    notreButTitle: 'Lengo Letu',
+                    but1: 'Kutangaza injili ya wokovu kwa mujibu wa agizo la Yesu Kristo Bwana wetu kulingana na Mathayo 28:19-20; Marko 16:15-16; Yohana 20:21 na uanzishwaji wa misioni za mitaa.',
+                    but2: 'Kukuza maendeleo ya kijamii, kiuchumi na kiutamaduni ya wakazi kupitia uundaji na utekelezaji wa programu na miradi ya maendeleo kama vile uanzishwaji wa shule, upangaji wa kazi za kijamii: vyombo vya habari vya jamii, hospitali na vituo vya afya, nyumba za kijamii, vituo vya kulea watu walio katika mazingira magumu, n.k.',
+                    but3: 'Kuandaa shughuli nyingine yoyote ya maslahi ya jumla inayolingana na misheni ya jumuiya.',
+                    departementsTitle: 'Idara zetu',
+                    enSavoirPlus: 'Jifunze zaidi',
+                    adminBodiesTitle: "Vyombo vya Utawala",
+                    adminBodiesDesc: "Jumuiya ya Misioni ya Pentekosti Smyrne imeundwa kwa misingi ya vyombo vya uongozi vifuatavyo:",
+                    nationalLevelTitle: "Katika ngazi ya taifa:",
+                    nationalLevelItem1: "Baraza kuu",
+                    nationalLevelItem2: "Baraza la utendaji",
+                    provincialLevelTitle: "Katika ngazi ya mkoa:",
+                    provincialLevelItem1: "Mikoa ya kiroho",
+                    provincialLevelItem2: "Misioni za mitaa",
+                    conseilExecutifTitle: "Baraza la Utendaji",
+                    conseilExecutifDesc: "Baraza la utendaji ni chombo cha utawala na utekelezaji. Linafanywa na:",
+                    legalRepresentative: "Mwakilishi wa Kisheria",
+                    legalRepresentativeDeputy: "Mwakilishi wa Kisheria msaidizi",
+                    financeDirector: "Mkurugenzi wa fedha",
+                    croyanceTitle: 'Imani Zetu',
+                    croyanceIntro: 'Imani yetu inatokana na Biblia, rejea yetu pekee.',
+                    belief1: 'Utatu Mtakatifu (baba, mwana na roho mtakatifu).',
+                    belief2: 'Biblia ni neno la Mungu lisilokosea.',
+                    belief3: 'Wokovu kwa neema ya Mungu.',
+                    belief4: 'Roho Mtakatifu.',
+                    prayerRequestTitle: 'Ombi ya maombi',
+                    prayerRequestDesc: "Maombi ni nguvu ya Kanisa la Smyrne, tunaweza kukuombea. Tafadhali jaza fomu hapa chini.",
+                    name: 'Jina',
+                    email: 'Anwani ya barua pepe',
+                    prayerRequestMessage: 'Ombi la maombi',
+                    send: 'Tuma',
+                    partnersTitle: 'Washirika Wetu',
+                    partnersDesc: "Ili kufikia lengo lake, Jumuiya ya Misioni ya Pentekosti Smyrne « CMPS » inafanya kazi na Makanisa ya Kikristo ya ndani na ya kimataifa na Mashirika ya Kikristo au watu binafsi ambao wamekubali ushirikiano kwa maendeleo mazuri ya kazi ya Mungu.",
+                    partnershipCtaTitle: "Unataka kuwa mshirika wetu?",
+                    partnershipCtaDesc: "Bofya kitufe cha WhatsApp ili kuwasiliana moja kwa moja na Mchungaji Patrick MULENGEZI, Mwakilishi wa Kisheria.",
+                    whatsappBtn: "Wasiliana kupitia WhatsApp",
+                    programsTitle: "Programu Zetu",
+                    programsDesc: "Kila siku ya juma tunakualika ujiunge nasi kwa muda wa ushirika wa nguvu na Bwana Yesu Kristo.",
+                    program1Title: "Jumatatu & Jumanne",
+                    program1Desc: "Maombi ya uombezi",
+                    program1Time: "17H00 - 18H00",
+                    program2Title: "Jumatano",
+                    program2Desc: "Utafiti wa Biblia",
+                    program2Time: "17H00 - 18:30",
+                    program3Title: "Alhamisi",
+                    program3Desc: "Huduma ya ukombozi",
+                    program3Time: "17H00 - 19H00",
+                    program4Title: "Jumapili",
+                    program4Desc: "Huduma ya ibada",
+                    program4Time: "08:30 - 10:30",
+                    quickLinksTitle: 'Viungo vya Haraka',
+                    followUsTitle: 'Tufuate',
+                    donationTitle: 'Kutoa mchango',
+                    donationText: 'Saidia huduma yetu na kazi zetu kwa kutoa mchango.',
+                    donateButton: 'Kutoa mchango',
+                    rightsReserved: 'Haki zote zimehifadhiwa.',
+                }
+            };
+
+            function setLanguage(lang) {
+                document.querySelectorAll('[data-i18n]').forEach(element => {
+                    const key = element.getAttribute('data-i18n');
+                    if (languageData[lang] && languageData[lang][key]) {
+                        element.innerHTML = languageData[lang][key];
+                    }
+                });
+                document.documentElement.lang = lang;
+            }
+
+            if (langBtn && langMenu) {
+                langBtn.addEventListener('click', () => {
+                    langMenu.classList.toggle('hidden');
+                });
+                document.addEventListener('click', (event) => {
+                    if (!langBtn.contains(event.target) && !langMenu.contains(event.target)) {
+                        langMenu.classList.add('hidden');
+                    }
+                });
+                langMenu.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        const lang = e.target.closest('a').getAttribute('data-lang');
+                        setLanguage(lang);
+                        langMenu.classList.add('hidden');
+                    });
+                });
+            }
+
+            if (sidebarLangBtn && sidebarLangMenu) {
+                sidebarLangBtn.addEventListener('click', () => {
+                    sidebarLangMenu.classList.toggle('hidden');
+                });
+                sidebarLangMenu.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        const lang = e.target.closest('a').getAttribute('data-lang');
+                        setLanguage(lang);
+                        sidebarLangMenu.classList.add('hidden');
+                        sidebar.classList.remove('open');
+                        sidebar.style.transform = 'translateX(100%)';
+                    });
+                });
+            }
+
+            setLanguage(localStorage.getItem('selectedLanguage') || 'fr');
+        });
+    </script>
+    
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const header = document.querySelector('header');
+  const progress = document.getElementById('scroll-progress');
+
+  const updateScrollUI = () => {
+    const y = window.scrollY;
+    header?.classList.toggle('scrolled', y > 35);
+
+    const doc = document.documentElement;
+    const max = doc.scrollHeight - window.innerHeight;
+    if (progress && max > 0) {
+      progress.style.width = `${(y / max) * 100}%`;
+    }
+  };
+
+  updateScrollUI();
+  window.addEventListener('scroll', updateScrollUI, {passive:true});
+
+  // Reveal content progressively as it enters the viewport.
+  const sections = document.querySelectorAll(
+    '#apropos, #depart, .organe, .conseil, #croyance, #priere, .partenaire, #programmes, .youtube'
+  );
+
+  sections.forEach(section => {
+    section.classList.add('reveal');
+  });
+
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          obs.unobserve(entry.target);
+        }
+      });
+    }, {threshold:0.10});
+    sections.forEach(section => observer.observe(section));
+  } else {
+    sections.forEach(section => section.classList.add('visible'));
+  }
+});
+</script>
+
+
+<script>
+/* Navbar language dropdown: keep the existing translation system compatible. */
+document.addEventListener('DOMContentLoaded', function () {
+    const langButton = document.getElementById('language-dropdown-button');
+    const langMenu = document.getElementById('language-dropdown-menu');
+
+    if (langButton && langMenu) {
+        langButton.addEventListener('click', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            langMenu.classList.toggle('smyrne-force-open');
+            langButton.setAttribute('aria-expanded', langMenu.classList.contains('smyrne-force-open'));
+        });
+
+        document.addEventListener('click', function (e) {
+            if (!e.target.closest('.smyrne-language')) {
+                langMenu.classList.remove('smyrne-force-open');
+                langButton.setAttribute('aria-expanded', 'false');
+            }
+        });
+    }
+
+    /* Highlight the current homepage link without changing the existing navigation. */
+    const current = window.location.pathname.split('/').pop() || 'index.html';
+    document.querySelectorAll('.smyrne-nav-link').forEach(link => {
+        link.classList.toggle('active', (link.getAttribute('href') || '') === current);
+    });
+});
+</script>
+<style>
+.smyrne-language-menu.smyrne-force-open{
+    opacity:1;
+    visibility:visible;
+    transform:translateY(0);
+}
+</style>
+
+</body>
+</html>
