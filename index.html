@@ -639,6 +639,41 @@ width:auto;
     
     
     </style>
+
+    <!-- Scroll animations (AOS) + Swiper -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.1.14/swiper-bundle.min.css">
+    <style>
+    /* If the AOS script cannot load, never leave content hidden */
+    html:not(.aos-ready) [data-aos]{opacity:1 !important;transform:none !important;transition:none !important}
+    /* Softer, slower movement: short distance, long fade */
+    html [data-aos="fade-up"]{transform:translate3d(0,26px,0)}
+    html [data-aos="fade-up"].aos-animate{transform:translate3d(0,0,0)}
+    @media (prefers-reduced-motion:reduce){[data-aos]{opacity:1 !important;transform:none !important;transition:none !important}}
+
+    /* Pastors swiper */
+    .conseil-swiper{padding:1rem .5rem 0;overflow:hidden}
+    .conseil-swiper .swiper-slide{height:auto;display:flex}
+    .conseil-swiper .swiper-slide>figure{width:100%;height:100%}
+    .conseil-swiper .swiper-pagination{position:relative;margin-top:1.75rem;bottom:auto !important}
+    .conseil-swiper .swiper-pagination-bullet{width:9px;height:9px;background:#d1d5db;opacity:1;transition:background .5s ease,transform .5s ease}
+    .conseil-swiper .swiper-pagination-bullet-active{background:#6b7280;transform:scale(1.25)}
+    .conseil-swiper{cursor:grab}
+    .conseil-swiper:active{cursor:grabbing}
+
+    /* Cookie banner */
+    #cookie-banner{position:fixed;left:1rem;bottom:1rem;z-index:60;max-width:22rem;background:#fff;color:#111827;border:1px solid #e5e7eb;border-radius:1rem;box-shadow:0 14px 40px rgba(0,0,0,.18);padding:1rem 1.1rem;opacity:0;transform:translateY(16px);transition:opacity .8s ease,transform .8s ease}
+    #cookie-banner.show{opacity:1;transform:translateY(0)}
+    #cookie-banner h6{font-size:.95rem;font-weight:700;margin:0 0 .35rem}
+    #cookie-banner p{font-size:.8rem;line-height:1.5;color:#4b5563;margin:0 0 .8rem}
+    #cookie-banner .cb-row{display:flex;gap:.5rem}
+    #cookie-banner button{flex:1;font-size:.8rem;font-weight:600;padding:.55rem .8rem;border-radius:9999px;cursor:pointer;transition:background .3s ease}
+    #cookie-accept{background:#111827;color:#fff;border:1px solid #111827}
+    #cookie-accept:hover{background:#374151}
+    #cookie-decline{background:#fff;color:#374151;border:1px solid #d1d5db}
+    #cookie-decline:hover{background:#f3f4f6}
+    @media (max-width:640px){#cookie-banner{left:.75rem;right:.75rem;bottom:.75rem;max-width:none}}
+    </style>
 </head>
 <body class="font-body text-gray-900 bg-white">
     <header class=" smyrne-header fixed w-full z-50">
@@ -865,12 +900,12 @@ width:auto;
         <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF"><path d="M480-528 296-344l-56-56 240-240 240 240-56 56-184-184Z"/></svg>
     </a>
 
-    <section id="apropos" class="py-20 px-6 bg-white fade-in" style="animation-delay: 0.6s;">
+    <section id="apropos" class="py-20 px-6 bg-white">
     <div class="container mx-auto max-w-6xl">
         <div class="flex flex-col md:flex-row items-center justify-center gap-12 lg:gap-16">
             
             <!-- Image Column -->
-            <div class="md:w-1/2 flex justify-center" id="myImage">
+            <div data-aos="fade-up" class="md:w-1/2 flex justify-center" id="myImage">
                 <div class="relative w-full max-w-md group">
                     <!-- Corrected glow classes -->
                     <div class="absolute -top-4 -left-4 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl pointer-events-none"></div>
@@ -885,7 +920,7 @@ width:auto;
             </div>
             
             <!-- Text Column with Consistent Professional Sizing -->
-            <div class="md:w-1/2 font-sans text-justify">
+            <div data-aos="fade-up" data-aos-delay="150" class="md:w-1/2 font-sans text-justify">
                 <div class="relative overflow-hidden rounded-3xl bg-gradient-to-br from-slate-700 via-slate-800 to-slate-950 border border-white/10 p-8 md:p-10 shadow-xl group">
 
                     <!-- Soft background ambient glows -->
@@ -945,7 +980,7 @@ width:auto;
     <div class="container mx-auto max-w-6xl">
         
         <!-- Header with an elegant, modern serif structure -->
-        <div class="section-head">
+        <div data-aos="fade-up" class="section-head">
            
             <h3 class="text-4xl md:text-5xl font-serif font-black tracking-wide" data-i18n="notreButTitle" style="font-family: 'Playfair Display', Georgia, serif;">
                 Notre But
@@ -957,7 +992,7 @@ width:auto;
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
             
             <!-- Card 1 -->
-            <div class="group relative bg-white p-8 rounded-2xl border border-gray-100 shadow-[0_4px_20px_rgba(0,0,0,0.02)] hover:shadow-[0_10px_40px_rgba(0,0,0,0.04)] transition-all duration-300 flex flex-col justify-between">
+            <div data-aos="fade-up" class="group relative bg-white p-8 rounded-2xl border border-gray-100 shadow-[0_4px_20px_rgba(0,0,0,0.02)] hover:shadow-[0_10px_40px_rgba(0,0,0,0.04)] transition-all duration-300 flex flex-col justify-between">
                 <div>
                     <div class="text-4xl font-serif text-gray-200 group-hover:text-slate-400 transition-colors mb-6 font-bold">01</div>
                     <h4 class="text-xl font-bold mb-3 text-gray-800">Évangélisation</h4>
@@ -968,7 +1003,7 @@ width:auto;
             </div>
 
             <!-- Card 2 -->
-            <div class="group relative bg-white p-8 rounded-2xl border border-gray-100 shadow-[0_4px_20px_rgba(0,0,0,0.02)] hover:shadow-[0_10px_40px_rgba(0,0,0,0.04)] transition-all duration-300 flex flex-col justify-between">
+            <div data-aos="fade-up" data-aos-delay="100" class="group relative bg-white p-8 rounded-2xl border border-gray-100 shadow-[0_4px_20px_rgba(0,0,0,0.02)] hover:shadow-[0_10px_40px_rgba(0,0,0,0.04)] transition-all duration-300 flex flex-col justify-between">
                 <div>
                     <div class="text-4xl font-serif text-gray-200 group-hover:text-slate-400 transition-colors mb-6 font-bold">02</div>
                     <h4 class="text-xl font-bold mb-3 text-gray-800">Développement Social</h4>
@@ -979,7 +1014,7 @@ width:auto;
             </div>
 
             <!-- Card 3 -->
-            <div class="group relative bg-white p-8 rounded-2xl border border-gray-100 shadow-[0_4px_20px_rgba(0,0,0,0.02)] hover:shadow-[0_10px_40px_rgba(0,0,0,0.04)] transition-all duration-300 flex flex-col justify-between">
+            <div data-aos="fade-up" data-aos-delay="200" class="group relative bg-white p-8 rounded-2xl border border-gray-100 shadow-[0_4px_20px_rgba(0,0,0,0.02)] hover:shadow-[0_10px_40px_rgba(0,0,0,0.04)] transition-all duration-300 flex flex-col justify-between">
                 <div>
                     <div class="text-4xl font-serif text-gray-200 group-hover:text-slate-400 transition-colors mb-6 font-bold">03</div>
                     <h4 class="text-xl font-bold mb-3 text-gray-800">Intérêt Général</h4>
@@ -994,8 +1029,8 @@ width:auto;
 </section>
 
 
-    <section class="organe container mx-auto section-pad fade-in" style="animation-delay: 1.4s;">
-    <div class="admin section-head">
+    <section class="organe container mx-auto section-pad">
+    <div data-aos="fade-up" class="admin section-head">
         <h4 class="text-4xl md:text-5xl font-serif font-black tracking-wide text-slate-900" style="font-family: 'Playfair Display', Georgia, serif;" data-i18n="adminBodiesTitle">Organes d'Administration</h4>
         <p class="text-base text-slate-600 leading-relaxed" data-i18n="adminBodiesDesc">
             La Communauté des Missions de Pentecôte Smyrne est structurée autour des organes de direction suivants :
@@ -1005,7 +1040,7 @@ width:auto;
     <div class="org grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
         
         <!-- National Level Card -->
-        <div class="group relative bg-white p-8 rounded-3xl border border-slate-100 shadow-[0_10px_30px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_40px_rgba(0,0,0,0.06)] transition-all duration-300 flex flex-col justify-between overflow-hidden">
+        <div data-aos="fade-up" class="group relative bg-white p-8 rounded-3xl border border-slate-100 shadow-[0_10px_30px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_40px_rgba(0,0,0,0.06)] transition-all duration-300 flex flex-col justify-between overflow-hidden">
             
             <div>
                 <div class="flex items-center gap-3 mb-6">
@@ -1032,7 +1067,7 @@ width:auto;
         </div>
 
         <!-- Provincial Level Card -->
-        <div class="group relative bg-white p-8 rounded-3xl border border-slate-100 shadow-[0_10px_30px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_40px_rgba(0,0,0,0.06)] transition-all duration-300 flex flex-col justify-between overflow-hidden">
+        <div data-aos="fade-up" data-aos-delay="150" class="group relative bg-white p-8 rounded-3xl border border-slate-100 shadow-[0_10px_30px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_40px_rgba(0,0,0,0.06)] transition-all duration-300 flex flex-col justify-between overflow-hidden">
             
             <div>
                 <div class="flex items-center gap-3 mb-6">
@@ -1060,44 +1095,55 @@ width:auto;
 
     </div>
 </section>
-    <section class="conseil container mx-auto px-4 py-12 fade-in" style="animation-delay: 1.6s;">
+    <section class="conseil container mx-auto px-4 py-12">
         <div class="text-center mb-10">
             <h4 class="text-4xl md:text-5xl font-serif font-black tracking-wide mb-12" style="font-family: 'Playfair Display', Georgia, serif;" data-i18n="conseilExecutifTitle">Le Conseil Exécutif</h4>
             <p class="text-base text-gray-600" data-i18n="conseilExecutifDesc">Le conseil exécutif est l’organe d’administration et d’exécution. Il est constitué de :</p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-
-            <figure class="bg-white p-6 rounded-2xl shadow-lg flex flex-col items-center text-center transition-all duration-300 conseil-card">
-                <img src="pasteur.jpg" alt="Pasteur Justin MINANI KABINGU" class="w-full max-w-full aspect-[6/6] h-72 rounded-md object-cover object-top mb-4 transition-transform duration-300">
-
-                <figcaption class="text-lg font-semibold text-gray-700">
-                    <span data-i18n="legalRepresentative" class="font-normal">Le Représentant Légal</span>
-                    <span class="block text-gray-900 font-semibold mt-1">Pasteur Patrick MULENGEZI</span>
-                </figcaption>
-            </figure>
-<figure class="bg-white p-6 rounded-2xl shadow-lg flex flex-col items-center text-center transition-all duration-300 conseil-card">
-    <!-- Replaced h-72 with aspect-[4/5] or aspect-video so it fills width proportionally -->
-    <img src="justin.jpg" alt="Pasteur Justin MINANI KABINGU" class="w-full max-w-full aspect-[6/6] h-72 rounded-md object-cover object-top  mb-4 transition-transform duration-300">
-
-    <figcaption class="text-lg font-semibold text-gray-700">
-        <span data-i18n="legalRepresentativeDeputy" class="font-normal">Secrétaire communautaire administratif</span>
-        <span class="block text-gray-900 font-semibold mt-1">Pasteur Justin MINANI KABINGU</span>
-    </figcaption>
-</figure>
-
-            <figure class="bg-white p-6 rounded-2xl shadow-lg flex flex-col items-center text-center transition-all duration-300 conseil-card">
-                 <img src="cimanuka.jpg" alt="Pasteur Moise MUDERHWA CHIM" class="w-full max-w-full aspect-[6/6] h-72 rounded-md object-cover object-top mb-4 transition-transform duration-300">
-
-                <figcaption class="text-lg font-semibold text-gray-700">
-                    <span data-i18n="churchLifeCharge" class="font-normal">Chargé de l’évangile et vie de l’église</span>
-                    <span class="block text-gray-900 font-semibold mt-1">Pasteur Moise MUDERHWA CHIM</span>
-                </figcaption>
-            </figure>
-
+        <div class="conseil-swiper swiper" id="conseil-swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <figure class="bg-white p-6 rounded-2xl shadow-lg flex flex-col items-center text-center transition-all duration-300 conseil-card">
+                        <img src="pasteur.jpg" alt="Pasteur Patrick MULENGEZI" class="w-full max-w-full aspect-[6/6] h-72 rounded-md object-cover object-top mb-4 transition-transform duration-300">
+                        <figcaption class="text-lg font-semibold text-gray-700">
+                            <span data-i18n="legalRepresentative" class="font-normal">Le Représentant Légal</span>
+                            <span class="block text-gray-900 font-semibold mt-1">Pasteur Patrick MULENGEZI</span>
+                        </figcaption>
+                    </figure>
+                </div>
+                <div class="swiper-slide">
+                    <figure class="bg-white p-6 rounded-2xl shadow-lg flex flex-col items-center text-center transition-all duration-300 conseil-card">
+                        <img src="Roger.jpeg" alt="Pasteur Roger Ramazani David" class="w-full max-w-full aspect-[6/6] h-72 rounded-md object-cover object-top mb-4 transition-transform duration-300">
+                        <figcaption class="text-lg font-semibold text-gray-700">
+                            <span data-i18n="legalRepresentativeAdjoint" class="font-normal">Le Représentant Légal Adjoint</span>
+                            <span class="block text-gray-900 font-semibold mt-1">Pasteur Roger Ramazani David</span>
+                        </figcaption>
+                    </figure>
+                </div>
+                <div class="swiper-slide">
+                    <figure class="bg-white p-6 rounded-2xl shadow-lg flex flex-col items-center text-center transition-all duration-300 conseil-card">
+                        <img src="justin.jpg" alt="Pasteur Justin MINANI KABINGU" class="w-full max-w-full aspect-[6/6] h-72 rounded-md object-cover object-top mb-4 transition-transform duration-300">
+                        <figcaption class="text-lg font-semibold text-gray-700">
+                            <span data-i18n="legalRepresentativeDeputy" class="font-normal">Secrétaire communautaire administratif</span>
+                            <span class="block text-gray-900 font-semibold mt-1">Pasteur Justin MINANI KABINGU</span>
+                        </figcaption>
+                    </figure>
+                </div>
+                <div class="swiper-slide">
+                    <figure class="bg-white p-6 rounded-2xl shadow-lg flex flex-col items-center text-center transition-all duration-300 conseil-card">
+                        <img src="cimanuka.jpg" alt="Pasteur Moise MUDERHWA CHIM" class="w-full max-w-full aspect-[6/6] h-72 rounded-md object-cover object-top mb-4 transition-transform duration-300">
+                        <figcaption class="text-lg font-semibold text-gray-700">
+                            <span data-i18n="churchLifeCharge" class="font-normal">Chargé de l’évangile et vie de l’église</span>
+                            <span class="block text-gray-900 font-semibold mt-1">Pasteur Moise MUDERHWA CHIM</span>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
         </div>
     </section>
-<section id="croyance" class="py-16 px-4 relative  bg-gradient-to-r from-black from-5% via-slate-700 via-50% to-black to-95% text-white fade-in" style="animation-delay: 1.2s;">
+<section id="croyance" class="py-16 px-4 relative  bg-gradient-to-r from-black from-5% via-slate-700 via-50% to-black to-95% text-white">
     <div class="container mx-auto text-center relative z-10">
             <h2 class="text-5xl font-extrabold mb-8  italic "  data-i18n="croyanceTitle" style="font-family: 'Playfair Display', Georgia, serif;">Nos Croyances</h2>
             <div class="max-w-4xl mx-auto text-lg leading-relaxed">
@@ -1105,19 +1151,19 @@ width:auto;
                     <span class="font-semibold tracking-wide italic  ">Notre foi est tirée de la Bible, notre unique référence.</span>
                 </p>
                 <div class="grid md:grid-cols-2 gap-8 text-left mt-4">
-                    <div class="flex items-center space-x-4">
+                    <div data-aos="fade-up" class="flex items-center space-x-4">
                         <i class="fas fa-church text-3xl text-yellow-400"></i>
                         <p data-i18n="belief1" class="text-lg italic ">La Trinité divine (père, fils et saint esprit).</p>
                     </div>
-                    <div class="flex items-center space-x-4">
+                    <div data-aos="fade-up" data-aos-delay="100" class="flex items-center space-x-4">
                         <i class="fas fa-bible text-3xl text-yellow-400"></i>
                         <p data-i18n="belief2" class="text-lg italic ">La bible est la parole infaillible de Dieu.</p>
                     </div>
-                    <div class="flex items-center space-x-4">
+                    <div data-aos="fade-up" data-aos-delay="200" class="flex items-center space-x-4">
                         <i class="fas fa-cross text-3xl text-yellow-400"></i>
                         <p data-i18n="belief3" class="text-lg italic ">Le salut par la grace de Dieu.</p>
                     </div>
-                    <div class="flex items-center space-x-4">
+                    <div data-aos="fade-up" data-aos-delay="300" class="flex items-center space-x-4">
                         <i class="fas fa-fire text-3xl text-yellow-400"></i>
                         <p data-i18n="belief4" class="text-lg italic ">Le Saint-Esprit.</p>
                     </div>
@@ -1155,8 +1201,8 @@ width:auto;
         </div>
     </section>
      -->
-   <section id="partenaires" class="partenaire container mx-auto section-pad fade-in" style="animation-delay: 2.0s;">
-        <div class="section-head">
+   <section id="partenaires" class="partenaire container mx-auto section-pad">
+        <div data-aos="fade-up" class="section-head">
             <h2 class="text-4xl md:text-5xl font-serif font-black tracking-wide" style="font-family: 'Playfair Display', Georgia, serif;"  data-i18n="partnersTitle">Nos Partenaires</h2>
             <p class="text-base text-gray-600" data-i18n="partnersDesc">
                 Pour bien atteindre son but, la Communauté des Missions de Pentecôte Smyrne « CMPS » travaille avec des Églises Chrétiennes locales et internationales et des Associations chrétiennes ou des particuliers qui ont accepté le partenariat pour la bonne marche de l'œuvre de Dieu.
@@ -1164,7 +1210,7 @@ width:auto;
         </div>
 
         <!-- Logos partenaires : défilement continu sans vide (le JS clone les logos) -->
-        <div class="logo-marquee" id="logo-marquee" aria-label="Nos partenaires">
+        <div data-aos="fade-up" data-aos-delay="100" class="logo-marquee" id="logo-marquee" aria-label="Nos partenaires">
             <div class="logo-track" id="logo-track">
                 <div class="logo-group" id="logo-group">
                     <div class="logo-item"><img src="bwa.jpeg" alt="Baptist World Alliance"></div>
@@ -1213,7 +1259,7 @@ width:auto;
             </div>
         </div>
 
-        <div class="partnership-cta bg-indigo-600 text-white p-8 rounded-2xl shadow-lg mt-12 text-center max-w-2xl mx-auto">
+        <div data-aos="fade-up" data-aos-delay="100" class="partnership-cta bg-indigo-600 text-white p-8 rounded-2xl shadow-lg mt-12 text-center max-w-2xl mx-auto">
             <h3 class="text-2xl font-bold mb-4" data-i18n="partnershipCtaTitle">Vous voulez devenir notre partenaire ?</h3>
             <p class="text-lg mb-6" data-i18n="partnershipCtaDesc">Cliquez sur le bouton WhatsApp pour contacter directement le Pasteur Patrick MULENGEZI, Représentant Légal.</p>
             <a href="https://wa.me/+243994033427" class="inline-block bg-white text-indigo-600 font-bold py-3 px-6 rounded-full shadow-lg hover:bg-gray-100 transition-colors" data-i18n="whatsappBtn">
@@ -1223,31 +1269,31 @@ width:auto;
     
     </section>
 
-    <section id="programmes" class="section-pad bg-gray-200 fade-in" style="animation-delay: 2.2s;">
+    <section id="programmes" class="section-pad bg-gray-200">
         <div class="container mx-auto">
-            <div class="section-head">
+            <div data-aos="fade-up" class="section-head">
                 <h2 class="text-4xl md:text-5xl font-serif font-black tracking-wide" style="font-family: 'Playfair Display', Georgia, serif;" data-i18n="programsTitle">Nos Programmes</h2>
                 <p class="text-base text-gray-600" data-i18n="programsDesc">
                     Chaque jour de la semaine nous vous invitons à nous rejoindre pour un moment de forte communion avec le Seigneur Jésus-Christ.
                 </p>
             </div>
             <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="p-6 rounded-lg shadow-md text-center" style="background:linear-gradient(135deg,#f3f4f6 0%,#fecdd3 100%)">
+                <div data-aos="fade-up" class="p-6 rounded-lg shadow-md text-center" style="background:linear-gradient(135deg,#f3f4f6 0%,#fecdd3 100%)">
                     <div class="flex items-center justify-center gap-2 mb-2"><i class="fa-regular fa-calendar-days text-lg" style="color:#c2415d" aria-hidden="true"></i><h3 class="text-xl font-bold text-gray-900" data-i18n="program1Title">Lundi & Mardi</h3></div>
                     <p class="text-gray-700" data-i18n="program1Desc">Prière d'intercession</p>
                     <div class="flex items-center justify-center gap-2 mt-2"><i class="fa-regular fa-clock" style="color:#c2415d" aria-hidden="true"></i><p class="text-gray-700 font-semibold" data-i18n="program1Time">17H00 - 18H00</p></div>
                 </div>
-                <div class="p-6 rounded-lg shadow-md text-center" style="background:linear-gradient(135deg,#f0fdf4 0%,#bbf7d0 100%)">
+                <div data-aos="fade-up" data-aos-delay="100" class="p-6 rounded-lg shadow-md text-center" style="background:linear-gradient(135deg,#f0fdf4 0%,#bbf7d0 100%)">
                     <div class="flex items-center justify-center gap-2 mb-2"><i class="fa-regular fa-calendar-days text-lg" style="color:#2f8f5b" aria-hidden="true"></i><h3 class="text-xl font-bold text-gray-900" data-i18n="program2Title">Mercredi</h3></div>
                     <p class="text-gray-700" data-i18n="program2Desc">Etude biblique</p>
                     <div class="flex items-center justify-center gap-2 mt-2"><i class="fa-regular fa-clock" style="color:#2f8f5b" aria-hidden="true"></i><p class="text-gray-700 font-semibold" data-i18n="program2Time">17H00 - 18:30</p></div>
                 </div>
-                <div class="p-6 rounded-lg shadow-md text-center" style="background:linear-gradient(135deg,#fffbeb 0%,#fde68a 100%)">
+                <div data-aos="fade-up" data-aos-delay="200" class="p-6 rounded-lg shadow-md text-center" style="background:linear-gradient(135deg,#fffbeb 0%,#fde68a 100%)">
                     <div class="flex items-center justify-center gap-2 mb-2"><i class="fa-regular fa-calendar-days text-lg" style="color:#b7791f" aria-hidden="true"></i><h3 class="text-xl font-bold text-gray-900" data-i18n="program3Title">Jeudi</h3></div>
                     <p class="text-gray-700" data-i18n="program3Desc">Culte de délivrance</p>
                     <div class="flex items-center justify-center gap-2 mt-2"><i class="fa-regular fa-clock" style="color:#b7791f" aria-hidden="true"></i><p class="text-gray-700 font-semibold" data-i18n="program3Time">17H00 - 19H00</p></div>
                 </div>
-                <div class="p-6 rounded-lg shadow-md text-center" style="background:linear-gradient(135deg,#fff7ed 0%,#fed7aa 100%)">
+                <div data-aos="fade-up" data-aos-delay="300" class="p-6 rounded-lg shadow-md text-center" style="background:linear-gradient(135deg,#fff7ed 0%,#fed7aa 100%)">
                     <div class="flex items-center justify-center gap-2 mb-2"><i class="fa-regular fa-calendar-days text-lg" style="color:#d9622b" aria-hidden="true"></i><h3 class="text-xl font-bold text-gray-900" data-i18n="program4Title">Dimanche</h3></div>
                     <p class="text-gray-700" data-i18n="program4Desc">Culte d'adoration</p>
                     <div class="flex items-center justify-center gap-2 mt-2"><i class="fa-regular fa-clock" style="color:#d9622b" aria-hidden="true"></i><p class="text-gray-700 font-semibold" data-i18n="program4Time">08:30 - 10:30</p></div>
@@ -1258,7 +1304,7 @@ width:auto;
 
 <section class="youtube">
     <div class="flex-centered-wrapper">
-        <div class="video-container">
+        <div data-aos="fade-up" class="video-container">
             <iframe
                 src="https://www.youtube.com/embed/kWqm2eGi8oU?rel=0&modestbranding=1" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen
                 frameborder="0"
@@ -1419,6 +1465,7 @@ width:auto;
                     conseilExecutifDesc: "Le conseil exécutif est l’organe d’administration et d’exécution. Il est constitué de :",
                     legalRepresentative: "Le Représentant Légal",
                     legalRepresentativeDeputy: "Secrétaire communautaire administratif",
+                    legalRepresentativeAdjoint: "Le Représentant Légal Adjoint",
                     churchLifeCharge: "Chargé de l’évangile et vie de l’église",
                     financeDirector: "La Directrice des finances",
                     croyanceTitle: 'Nos Croyances',
@@ -1502,6 +1549,7 @@ width:auto;
                     conseilExecutifDesc: "The executive council is the administrative and executive body. It consists of:",
                     legalRepresentative: "The Legal Representative",
                     legalRepresentativeDeputy: "Administrative Community Secretary",
+                    legalRepresentativeAdjoint: "The Deputy Legal Representative",
                     churchLifeCharge: "In charge of the gospel and church life",
                     financeDirector: "The Director of Finance",
                     croyanceTitle: 'Our Beliefs',
@@ -1599,6 +1647,7 @@ width:auto;
                     conseilExecutifDesc: "El consejo ejecutivo es el órgano de administración y ejecución. Está formado por:",
                     legalRepresentative: "El Representante Legal",
                     legalRepresentativeDeputy: "Secretario comunitario administrativo",
+                    legalRepresentativeAdjoint: "El Representante Legal Adjunto",
                     churchLifeCharge: "Encargado del evangelio y la vida de la iglesia",
                     financeDirector: "La Directora de finanzas",
                     croyanceTitle: 'Nuestras Creencias',
@@ -1689,6 +1738,7 @@ width:auto;
                     conseilExecutifDesc: "Baraza la utendaji ni chombo cha utawala na utekelezaji. Linafanywa na:",
                     legalRepresentative: "Mwakilishi wa Kisheria",
                     legalRepresentativeDeputy: "Katibu wa jumuiya wa utawala",
+                    legalRepresentativeAdjoint: "Mwakilishi wa Kisheria Msaidizi",
                     churchLifeCharge: "Msimamizi wa injili na maisha ya kanisa",
                     financeDirector: "Mkurugenzi wa fedha",
                     croyanceTitle: 'Imani Zetu',
@@ -1884,5 +1934,150 @@ document.addEventListener('DOMContentLoaded', function () {
 })();
 </script>
 <!-- /Prayer floating button -->
+<!-- ===== Scroll animations (AOS) + Swiper + Cookies + Cache ===== -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.1.14/swiper-bundle.min.js"></script>
+<script>
+(function () {
+    // ---- 1. Slow, calm scroll reveal ----
+    if (window.AOS) {
+        AOS.init({
+            duration: 800,             // calm but not slow
+            easing: 'ease-out-cubic',  // starts soft, settles gently
+            once: true,                // animate once, never re-hide
+            offset: 80,                // starts a little before the block is fully in view
+            disable: function () { return window.matchMedia('(prefers-reduced-motion: reduce)').matches; }
+        });
+        document.documentElement.classList.add('aos-ready');
+        // After the reveal, give the element back its normal (fast) hover transitions
+        document.addEventListener('aos:in', function (e) {
+            var el = e.detail; if (!el || !el.getAttribute) return;
+            var d = parseInt(el.getAttribute('data-aos-delay') || '0', 10);
+            setTimeout(function () {
+                el.removeAttribute('data-aos'); el.removeAttribute('data-aos-delay');
+                el.classList.remove('aos-init', 'aos-animate');
+            }, d + 900);
+        });
+        window.addEventListener('load', function () { AOS.refresh(); });
+    }
+
+    // ---- 2. Pastors swiper ----
+    if (window.Swiper) {
+        var el = document.getElementById('conseil-swiper');
+        if (el) {
+            var pastors = new Swiper(el, {
+                loop: true,
+                
+                speed: 1100,
+                grabCursor: true,
+                slidesPerView: 1,
+                spaceBetween: 24,
+                autoplay: { delay: 3500, disableOnInteraction: false, pauseOnMouseEnter: true },
+                mousewheel: { forceToAxis: true, thresholdTime: 600 },   // left/right scroll (trackpad, shift+wheel)
+                keyboard: { enabled: true },
+                pagination: { el: el.querySelector('.swiper-pagination'), clickable: true },
+                breakpoints: {
+                    768:  { slidesPerView: 2, spaceBetween: 28 },
+                    1024: { slidesPerView: 3, spaceBetween: 32 }
+                }
+            });
+            window.addEventListener('load', function () { pastors.update(); });
+
+            // Autoplay only while the "Nos pasteurs" section is on screen
+            pastors.autoplay.stop();
+            if ('IntersectionObserver' in window) {
+                new IntersectionObserver(function (entries) {
+                    entries.forEach(function (en) {
+                        if (en.isIntersecting) pastors.autoplay.start();
+                        else pastors.autoplay.stop();
+                    });
+                }, { threshold: 0.35 }).observe(el);
+            } else {
+                pastors.autoplay.start();   // very old browsers: just run
+            }
+        }
+    }
+})();
+</script>
+
+<!-- ===== Cookie banner ===== -->
+<div id="cookie-banner" role="dialog" aria-live="polite" aria-labelledby="cb-title" hidden>
+    <h6 id="cb-title">Cookies</h6>
+    <p id="cb-text"></p>
+    <div class="cb-row">
+        <button type="button" id="cookie-decline"></button>
+        <button type="button" id="cookie-accept"></button>
+    </div>
+</div>
+<script>
+(function () {
+    var T = {
+        fr: { p: 'Nous utilisons des cookies pour mémoriser votre langue et améliorer votre expérience. Vous pouvez accepter ou refuser les cookies non essentiels.', a: 'Accepter', d: 'Refuser' },
+        en: { p: 'We use cookies to remember your language and improve your experience. You can accept or decline non-essential cookies.', a: 'Accept', d: 'Decline' },
+        es: { p: 'Usamos cookies para recordar tu idioma y mejorar tu experiencia. Puedes aceptar o rechazar las cookies no esenciales.', a: 'Aceptar', d: 'Rechazar' },
+        sw: { p: 'Tunatumia vidakuzi (cookies) kukumbuka lugha yako na kuboresha matumizi yako. Unaweza kukubali au kukataa vidakuzi visivyo vya lazima.', a: 'Kubali', d: 'Kataa' }
+    };
+    var LANGS = ['fr', 'en', 'es', 'sw'], DAYS = 180;
+    var banner = document.getElementById('cookie-banner');
+
+    function setCookie(n, v) {
+        var d = new Date(); d.setTime(d.getTime() + DAYS * 864e5);
+        document.cookie = n + '=' + encodeURIComponent(v) + ';expires=' + d.toUTCString() + ';path=/;SameSite=Lax' + (location.protocol === 'https:' ? ';Secure' : '');
+    }
+    function delCookie(n) { document.cookie = n + '=;expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/;SameSite=Lax'; }
+    function getCookie(n) {
+        var m = document.cookie.match('(?:^|; )' + n + '=([^;]*)');
+        return m ? decodeURIComponent(m[1]) : null;
+    }
+    function lang() { var l = (document.documentElement.lang || 'fr').slice(0, 2); return T[l] ? l : 'fr'; }
+    function render() {
+        var t = T[lang()];
+        document.getElementById('cb-text').textContent = t.p;
+        document.getElementById('cookie-accept').textContent = t.a;
+        document.getElementById('cookie-decline').textContent = t.d;
+    }
+    function saveLang() { if (getCookie('cmps_consent') === 'accepted') setCookie('cmps_lang', lang()); }
+    function show() {
+        render(); banner.hidden = false;
+        requestAnimationFrame(function () { requestAnimationFrame(function () { banner.classList.add('show'); }); });
+    }
+    function hide() { banner.classList.remove('show'); setTimeout(function () { banner.hidden = true; }, 900); }
+
+    document.getElementById('cookie-accept').addEventListener('click', function () {
+        setCookie('cmps_consent', 'accepted'); saveLang(); hide();
+    });
+    document.getElementById('cookie-decline').addEventListener('click', function () {
+        setCookie('cmps_consent', 'declined'); delCookie('cmps_lang'); hide();
+    });
+
+    // keep the banner text and the saved language in sync when the visitor changes language
+    document.addEventListener('click', function (e) {
+        var a = e.target.closest && e.target.closest('[data-lang]');
+        if (!a) return;
+        setTimeout(function () { if (!banner.hidden) render(); saveLang(); }, 0);
+    });
+
+    document.addEventListener('DOMContentLoaded', function () {
+        var consent = getCookie('cmps_consent');
+        if (consent === 'accepted') {
+            var saved = getCookie('cmps_lang');
+            if (saved && LANGS.indexOf(saved) > -1 && saved !== lang()) {
+                var link = document.querySelector('#language-dropdown-menu a[data-lang="' + saved + '"]');
+                if (link) link.click();   // reuse the site's own language switcher
+            }
+        } else if (!consent) {
+            setTimeout(show, 2000);       // appear calmly, not on the first frame
+        }
+    });
+})();
+</script>
+
+<!-- ===== Cache (service worker) ===== -->
+<script>
+if ('serviceWorker' in navigator && (location.protocol === 'https:' || location.hostname === 'localhost')) {
+    window.addEventListener('load', function () { navigator.serviceWorker.register('sw.js').catch(function () {}); });
+}
+</script>
+
 </body>
 </html>
